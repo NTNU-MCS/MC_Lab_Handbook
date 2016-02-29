@@ -4457,6 +4457,12 @@ Stop before automatic stop at high speeds.
 \end_layout
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Qualisys-motion-capture"
+
+\end_inset
+
 Qualisys motion capture system
 \end_layout
 
@@ -8370,7 +8376,11 @@ Student controller implementation
 \end_layout
 
 \begin_layout Enumerate
-Unzip the CSE1 Veristand Project 
+Download the control system from GitHub
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -8383,7 +8393,7 @@ status open
 
 
 \family typewriter
-CSE1.zip
+github.com/NTNU-MCS/CS_EnterpriseI_cRIO
 \family default
 
 \begin_inset ERT
@@ -8396,7 +8406,12 @@ status open
 
 \end_inset
 
- to 
+ 
+\end_layout
+
+\begin_layout Enumerate
+Unzip the control system.
+ The prefered path is 
 \family typewriter
 C:
 \backslash
@@ -8405,16 +8420,7 @@ CSE1
 
 \family default
 .
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Other paths are possible but require changing all VeriStand project paths.
-\end_layout
-
-\end_inset
-
-
+ Other paths require updating paths in the project definition.
 \end_layout
 
 \begin_layout Enumerate
@@ -8462,8 +8468,8 @@ reference "sub: Simulink modeling"
 \begin_inset Newline newline
 \end_inset
 
-Do not alter the predefined input and output: x, y, psi, u_BT, u_VSP1, u_VSP2,
- alpha_VSP1, alpha_VSP2, omega_VSP1 and omega_VSP2.
+Do not alter the predefined input and output: x_m, y_m, psi_m, u_BT, u_VSP1,
+ u_VSP2, alpha_VSP1, alpha_VSP2, omega_VSP1 and omega_VSP2.
 \end_layout
 
 \begin_layout Enumerate
@@ -8491,11 +8497,13 @@ reference "sub: Simulink model build"
 \end_inset
 
 .
- The MATLAB current folder should be 
+ If using the prefered path, the MATLAB current folder should be 
 \family typewriter
 C:
 \backslash
 CSE1
+\backslash
+simulink source
 \backslash
 
 \family default
@@ -8509,6 +8517,8 @@ C:
 \backslash
 CSE1
 \backslash
+simulink source
+\backslash
 ctrl_student_niVeriStand_VxWorks_rtw
 \family default
 .
@@ -8516,7 +8526,7 @@ ctrl_student_niVeriStand_VxWorks_rtw
 
 \end_deeper
 \begin_layout Enumerate
-CSE1 Veristand Project configuration
+CSE1 VeriStand Project configuration
 \end_layout
 
 \begin_deeper
@@ -8952,6 +8962,18 @@ Check battery voltages, “Main battery” should be 10 Volt or more, maximum
 
 \begin_layout Subsubsection
 Positioning system
+\end_layout
+
+\begin_layout Standard
+If the positioning system is not initialized for CSE1, follow the procedures
+ in Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Qualisys-motion-capture"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
