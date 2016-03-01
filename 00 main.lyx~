@@ -8376,7 +8376,11 @@ Student controller implementation
 \end_layout
 
 \begin_layout Enumerate
-Download the control system from 
+Download the control system from GitHub
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset ERT
 status open
 
