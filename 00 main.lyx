@@ -20676,7 +20676,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="3">
+<lyxtabular version="3" rows="9" columns="3">
 <features rotate="0" booktabs="true" tabularvalignment="middle">
 <column alignment="none" valignment="top" special=">{\bfseries}l">
 <column alignment="left" valignment="top" width="2.4cm">
@@ -20947,6 +20947,35 @@ to
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wifi Bridge in CSE1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+192.168.0.30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CSE1
 \end_layout
 
 \end_inset

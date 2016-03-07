@@ -8415,7 +8415,7 @@ Unzip the control system.
 \family typewriter
 C:
 \backslash
-CSE1
+CS_EnterpriseI_cRIO
 \backslash
 
 \family default
@@ -8501,7 +8501,7 @@ reference "sub: Simulink model build"
 \family typewriter
 C:
 \backslash
-CSE1
+CS_EnterpriseI_cRIO
 \backslash
 simulink source
 \backslash
@@ -8515,7 +8515,7 @@ simulink source
 \family typewriter
 C:
 \backslash
-CSE1
+CS_EnterpriseI_cRIO
 \backslash
 simulink source
 \backslash
