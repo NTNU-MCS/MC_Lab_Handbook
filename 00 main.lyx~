@@ -5040,7 +5040,7 @@ The manual is written and tested for ROS-Indigo and MATLAB 2015b.
  It is based on MATLAB's manual for importing custom messages 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "ROSGENMSG"
+key "MathWorks2016"
 
 \end_inset
 
@@ -5124,7 +5124,7 @@ Now import the Qualisys driver from GitHub.
  (The driver 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Qualisys"
+key "KumarRobotics2016"
 
 \end_inset
 
