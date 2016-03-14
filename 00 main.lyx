@@ -5004,6 +5004,493 @@ reference "fig:Qualisys-Track-ManagerWaiting"
 
 \end_layout
 
+\begin_layout Section
+Importing Data from the Qualisys System into ROS and MATLAB(Linux)
+\end_layout
+
+\begin_layout Standard
+The following approach may be used to read Qualisys data into ROS and MATLAB.
+ The method is convenient for Qualisys data into to MATLAB independent on
+ whether the rest of the system use ROS or not.
+ The method, as described is limited to Linux-operating systems.
+\end_layout
+
+\begin_layout Standard
+The first part of the manual describe how import Qualisys data into ROS,
+ while the second part describe how to get the data from ROS into MATLAB/Simulin
+k.
+\end_layout
+
+\begin_layout Standard
+Please note the following: 
+\end_layout
+
+\begin_layout Itemize
+In the manual, the dollar sign $ indicate a line of text that should be
+ written in the Linux- terminal window.
+\end_layout
+
+\begin_layout Itemize
+In the manual gedit is used as text editor.
+ This can be replaced with the readers favourite text editor.
+\end_layout
+
+\begin_layout Itemize
+The manual is written and tested for ROS-Indigo and MATLAB 2015b.
+ It is based on MATLAB's manual for importing custom messages 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "MathWorks2016"
+
+\end_inset
+
+, which is and adapted and expanded to fit that of the MC lab and the Qualisys
+ system.
+\end_layout
+
+\begin_layout Itemize
+You need MATLAB version 2015a or newer in order to proceed with the MATLAB
+ section of the manual.
+\end_layout
+
+\begin_layout Subsection
+Manual
+\end_layout
+
+\begin_layout Standard
+If not already installed on the machine you should start by installing ROS.
+ Follow the instructions on the ROS download page: http://wiki.ros.org/indigo/Inst
+allation/Ubuntu
+\end_layout
+
+\begin_layout Standard
+You should now make a ROS workspace in your home directory:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}$mkdir -p ~/catkin_ws/src 
+\end_layout
+
+\begin_layout Plain Layout
+
+$cd ~/catkin_ws/src
+\end_layout
+
+\begin_layout Plain Layout
+
+$catkin_init_workspace
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You now need to make sure that one are sourcing the setup.bash file in your
+ ROS workspace each time you open your terminal window.
+ This can be done by changing the bash file with the following command:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}$ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now import the Qualisys driver from GitHub.
+ (The driver 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "KumarRobotics2016"
+
+\end_inset
+
+ is avaiable through the Apache License )
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}$ cd ~/catkin_ws/src
+\end_layout
+
+\begin_layout Plain Layout
+
+$ git clone https://github.com/KumarRobotics/qualisys
+\end_layout
+
+\begin_layout Plain Layout
+
+$ cd ~/catkin_ws
+\end_layout
+
+\begin_layout Plain Layout
+
+$ catkin_make
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Open the qualisys.launch file in a text-editor
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}$ sudo gedit ~/catkin_ws/src/qualisys/launch/qualisys.launch
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Edit the ip address and port number for the Qualisys system.
+ (As of March 2016 the IP is: 192.168.0.10 and the port is 22222 )
+\end_layout
+
+\begin_layout Standard
+The driver should now be set for interfacing with Qualisys in ROS.
+ To test it, first check that you are able to ping the Qualisys system over
+ the MC lab WiFi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}$ ping 192.168.0.10
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you successfully pinged the qualisys system it should now be possible
+ to listen to the data from the Qualisys system.
+\end_layout
+
+\begin_layout Standard
+(Note that the Qualisys system need to recognize the IR-markers in the MC
+ lab in order to transmit data.
+ It may be smart to first to check that the computer running Qualisys software
+ in the MC-Lab sees the marker)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}$ roslaunch qualisys qualisys.launch
+\end_layout
+
+\begin_layout Plain Layout
+
+$ rostopic list
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The command 
+\begin_inset Quotes eld
+\end_inset
+
+rostopic list
+\begin_inset Quotes erd
+\end_inset
+
+ prints the ROS active ROS topics.
+ It should now be printed a qualisys topic in terminal.
+ The name will depend on the name set on the Qualisys computer.
+ In this manual the topic is named /qualisys/CSE1.
+\end_layout
+
+\begin_layout Standard
+You can now listen to the data as it is published to ROS
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}$ rostopic echo /qualisys/CSE1
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Getting Qualisys data to MATLAB
+\end_layout
+
+\begin_layout Standard
+The message sent from the Qualisys system is a custom message that MATLAB
+ does not recognize (most messages in ROS is not custom, and will be recognized
+ by MATLAB).
+ In order to get the Qualisys data into MATLAB you one to facilitate so
+ that MATLAB recognize the custom message.
+\end_layout
+
+\begin_layout Standard
+Start by creating a new folder ~/qualisysDir.
+ Now copy the folder named qualisys, located in ~/catkin_ws/src and paste
+ it into the folder ~/qualisysDir
+\end_layout
+
+\begin_layout Standard
+Now one want to edit the package file so that MATLAB recognizes the messages.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}Sudo gedit ~/qualisysDir/qualisys/package.xml
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Add the following two lines somewhere in the main body of the package.xml
+ file.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}<build_depend>geometry_msgs</build_depend>
+\end_layout
+
+\begin_layout Plain Layout
+
+<build_depend>std_msgs</build_depend>
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now open MATLAB.
+ The first step in MATLAB is to download the ROS custom message package.
+ Type the following lines into the MATLAB command window, and follow instruction
+s to download the ROS custom message package.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}roboticsAddons (in MATLAB 2016)
+\end_layout
+
+\begin_layout Plain Layout
+
+roboticsSupportPackages  (in MATLAB 2015)
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When the download is finished paste the following commands in the MATLAB
+ command window.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}folderpath= '~/qualisysDir'
+\end_layout
+
+\begin_layout Plain Layout
+
+rosgenmsg(folderpath)
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now follow the instructions generated by MATLAB in order generate the needed
+ message type.
+ In this process you may need allow writing permission to the file 
+\begin_inset Quotes eld
+\end_inset
+
+pathdef.m
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You are now ready to get the data into MATLAB.
+\end_layout
+
+\begin_layout Standard
+Remember that the Qualisys node always need to be launched before reading
+ signals in MATLAB.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}roslaunch qualisys qualisys.launch
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can now get the data into Simulink by the Subscriber block, or to MATLAB
+ workspace by typing the following commands:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}Subb = rossubscriber('/qualisys/CSE1');
+\end_layout
+
+\begin_layout Plain Layout
+
+posedata = receive(Subb,10);
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Towing carriage
 \end_layout
