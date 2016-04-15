@@ -7758,11 +7758,13 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="6">
+<lyxtabular version="3" rows="4" columns="8">
 <features rotate="0" booktabs="true" tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
 <column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
 <column alignment="right" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="right" valignment="top">
@@ -7785,6 +7787,15 @@ Surge
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell multicolumn="1" alignment="center" valignment="top" usebox="none" special="c">
 \begin_inset Text
 
@@ -7795,6 +7806,15 @@ Sway
 \end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7847,6 +7867,15 @@ Yaw
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -7867,6 +7896,15 @@ Yaw
 \end_inset
 
  
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -7918,6 +7956,15 @@ JON
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -7938,6 +7985,15 @@ JON
 \end_inset
 
  
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -7989,6 +8045,15 @@ JON
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -8009,6 +8074,15 @@ JON
 \end_inset
 
  
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -8104,10 +8178,11 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="5">
+<lyxtabular version="3" rows="4" columns="6">
 <features rotate="0" booktabs="true" tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="right" valignment="top">
 <column alignment="left" valignment="top">
@@ -8131,6 +8206,15 @@ Thrust
 \end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8189,6 +8273,15 @@ JON [N]
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="right" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
@@ -8238,6 +8331,15 @@ Sway
 
 \begin_layout Plain Layout
 JON [N]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -8295,6 +8397,15 @@ JON [N
 \end_inset
 
 m]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -10934,8 +11045,9 @@ Power up and connection
 
 \begin_layout Enumerate
 \noindent
-Place the batteries adjacent to the watertight box: main battery battery
- (12 V) astern and secondary battery (6 V) in the bow.
+Place the batteries adjacent to the watertight box: main battery (12 V)
+ astern, a secondary battery (6 V) in the bow and a third battery (6V) just
+ behind the main battery..
 \end_layout
 
 \begin_layout Enumerate
@@ -10999,8 +11111,8 @@ When succesfully connected, the Bluetooth dongle blue LED is almost constantly
 \end_layout
 
 \begin_layout Enumerate
-Connect the seconday battery: red wire to the red/positive pole, then the
- black wire to the black/negative pole.
+Connect the seconday and the third battery: red wire to the red/positive
+ pole, then the black wire to the black/negative pole.
 \begin_inset Newline newline
 \end_inset
 
@@ -17985,10 +18097,16 @@ CS Enterprise I
 
 \begin_layout Standard
 Increased servo percentage results in clockwise? motion.
-\end_layout
+ Note that a second 6V battery has been installed in order to prevent voltage
+ drops on the Wifi-bridge, which caused terminations of the Wifi-signal
+ when the bow-thruster was intensivly used, see also Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CSE1-Second6V"
 
-\begin_layout Standard
-Hystersis on motors
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -18097,6 +18215,54 @@ name "fig: CSE1 hardware"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename Second_6V_Enterprise.jpg
+	width 95text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+CSE1 - Seconds 6V battery 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CSE1-Second6V"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
