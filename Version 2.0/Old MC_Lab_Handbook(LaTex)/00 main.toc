@@ -1,0 +1,222 @@
+\select@language {english}
+\contentsline {part}{I\hspace {1em}Introduction}{1}{part.1}
+\contentsline {chapter}{\numberline {1}Marine cybernetics laboratory}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Fixed Equipment}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Qualisys motion capture system}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Towing carriage}{4}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Wave generator}{4}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Current generator}{4}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}Vessels}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}CS Inocean Cat I Arctic Drillship}{6}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}CS Saucer}{7}{subsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.1}Hull}{7}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2.2}Control system}{8}{subsubsection.1.2.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.3}Actuators}{8}{subsubsection.1.2.2.3}
+\contentsline {subsubsection}{\numberline {1.2.2.4}Power}{8}{subsubsection.1.2.2.4}
+\contentsline {subsubsection}{\numberline {1.2.2.5}Literature}{9}{subsubsection.1.2.2.5}
+\contentsline {paragraph}{Specialization projects and master theses}{9}{section*.9}
+\contentsline {subsection}{\numberline {1.2.3}ROV Neptunus}{10}{subsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.3.1}Hull}{10}{subsubsection.1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.2.3.2}Actuators}{10}{subsubsection.1.2.3.2}
+\contentsline {subsubsection}{\numberline {1.2.3.3}Control system}{10}{subsubsection.1.2.3.3}
+\contentsline {subsubsection}{\numberline {1.2.3.4}Literature}{10}{subsubsection.1.2.3.4}
+\contentsline {paragraph}{Specialization projects and master theses}{10}{section*.11}
+\contentsline {subsection}{\numberline {1.2.4}CS Enterprise I}{11}{subsection.1.2.4}
+\contentsline {subsubsection}{\numberline {1.2.4.1}Hull}{11}{subsubsection.1.2.4.1}
+\contentsline {subsubsection}{\numberline {1.2.4.2}Actuators}{11}{subsubsection.1.2.4.2}
+\contentsline {subsubsection}{\numberline {1.2.4.3}Control system}{11}{subsubsection.1.2.4.3}
+\contentsline {paragraph}{High-level communication}{12}{figure.caption.16}
+\contentsline {paragraph}{Low-level communication}{12}{section*.17}
+\contentsline {paragraph}{Software}{12}{figure.caption.19}
+\contentsline {subsubsection}{\numberline {1.2.4.4}Power}{14}{subsubsection.1.2.4.4}
+\contentsline {subsubsection}{\numberline {1.2.4.5}Literature}{14}{subsubsection.1.2.4.5}
+\contentsline {paragraph}{Journals and conferences}{14}{section*.21}
+\contentsline {paragraph}{Specialization projects and master theses}{15}{section*.22}
+\contentsline {paragraph}{Other}{15}{section*.23}
+\contentsline {subsubsection}{\numberline {1.2.4.6}Further development}{15}{subsubsection.1.2.4.6}
+\contentsline {subsection}{\numberline {1.2.5}Cybership III}{16}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.6}Cybership II}{17}{subsection.1.2.6}
+\contentsline {subsection}{\numberline {1.2.7}Cybership I}{18}{subsection.1.2.7}
+\contentsline {subsection}{\numberline {1.2.8}CyberRig}{19}{subsection.1.2.8}
+\contentsline {subsection}{\numberline {1.2.9}Our Lass II model}{20}{subsection.1.2.9}
+\contentsline {subsubsection}{\numberline {1.2.9.1}Literature}{20}{subsubsection.1.2.9.1}
+\contentsline {paragraph}{Journals and conferences}{20}{section*.25}
+\contentsline {chapter}{\numberline {2}Control system development philosophy}{21}{chapter.2}
+\contentsline {section}{\numberline {2.1}Development Steps}{22}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Model-in-the-Loop}{22}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}Principle}{22}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}Aim}{22}{subsubsection.2.1.1.2}
+\contentsline {subsubsection}{\numberline {2.1.1.3}Iteration time}{22}{subsubsection.2.1.1.3}
+\contentsline {subsubsection}{\numberline {2.1.1.4}Cost}{22}{subsubsection.2.1.1.4}
+\contentsline {subsection}{\numberline {2.1.2}Software-in-the-Loop}{22}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Aim}{22}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.2}Iteration time}{22}{subsubsection.2.1.2.2}
+\contentsline {subsection}{\numberline {2.1.3}Processor-in-the-Loop}{23}{subsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.3.1}Principle}{23}{subsubsection.2.1.3.1}
+\contentsline {subsubsection}{\numberline {2.1.3.2}Aim}{23}{subsubsection.2.1.3.2}
+\contentsline {subsubsection}{\numberline {2.1.3.3}Iteration time}{23}{subsubsection.2.1.3.3}
+\contentsline {subsection}{\numberline {2.1.4}Hardware-in-the-Loop}{23}{subsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.4.1}Principle}{23}{subsubsection.2.1.4.1}
+\contentsline {subsubsection}{\numberline {2.1.4.2}Aim}{23}{subsubsection.2.1.4.2}
+\contentsline {subsection}{\numberline {2.1.5}Scale test}{23}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.6}Full scale}{23}{subsection.2.1.6}
+\contentsline {section}{\numberline {2.2}Recommended Control Modes}{24}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Individual actuator control}{24}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Generalized force control}{24}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Body frame}{25}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Inertial frame}{25}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.3}User frame}{25}{subsubsection.2.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Regulation}{25}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Marine Operations Control}{26}{subsection.2.2.4}
+\contentsline {part}{II\hspace {1em}Laboratory user guide}{27}{part.2}
+\contentsline {chapter}{\numberline {3}Safety and access}{28}{chapter.3}
+\contentsline {section}{\numberline {3.1}Hazards and measures}{28}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Personnel injury}{28}{subsection.3.1.1}
+\contentsline {paragraph}{Drowning}{28}{section*.31}
+\contentsline {paragraph}{Electric shock}{28}{section*.32}
+\contentsline {paragraph}{Carriage collision}{28}{section*.33}
+\contentsline {paragraph}{Thruster blade cuts}{28}{section*.34}
+\contentsline {subsection}{\numberline {3.1.2}Material damage}{28}{subsection.3.1.2}
+\contentsline {paragraph}{Cybership Enterprise 1}{28}{section*.35}
+\contentsline {paragraph}{Towing carriage}{29}{section*.36}
+\contentsline {section}{\numberline {3.2}Access}{30}{section.3.2}
+\contentsline {chapter}{\numberline {4}Qualisys motion capture system}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Start Qualisys Track Manager}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}Aquire body}{32}{section.4.2}
+\contentsline {section}{\numberline {4.3}Troubleshooting}{34}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Long waiting for camera}{34}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Importing Data from the Qualisys System into ROS and MATLAB(Linux)}{36}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Manual}{36}{subsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.1.1}Getting Qualisys data to MATLAB}{37}{subsubsection.4.4.1.1}
+\contentsline {chapter}{\numberline {5}Towing carriage}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Preparation before startup}{39}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Operation console}{39}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Manual Operation of the Carriage}{41}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Setup}{41}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Main/Standard Operation}{43}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Operation Controlled automatically from PC}{44}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}The Trajectory Input File}{44}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}Troubleshooting}{45}{section.5.4}
+\contentsline {section}{\numberline {5.5}Note}{45}{section.5.5}
+\contentsline {section}{\numberline {5.6}Basic parameter identification}{46}{section.5.6}
+\contentsline {chapter}{\numberline {6}Wave generator}{47}{chapter.6}
+\contentsline {chapter}{\numberline {7}Current generator}{48}{chapter.7}
+\contentsline {chapter}{\numberline {8}CS Inocean Cat I Drillship}{49}{chapter.8}
+\contentsline {section}{\numberline {8.1}Mathematical model}{49}{section.8.1}
+\contentsline {chapter}{\numberline {9}CS Enterprise I}{52}{chapter.9}
+\contentsline {section}{\numberline {9.1}Mathematical model}{52}{section.9.1}
+\contentsline {section}{\numberline {9.2}Model-in-the-loop simulation}{55}{section.9.2}
+\contentsline {section}{\numberline {9.3}Processor-in-the-Loop simulation}{56}{section.9.3}
+\contentsline {section}{\numberline {9.4}Basin testing}{57}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Student controller implementation}{57}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}Ship launching procedure - before sailing}{59}{subsection.9.4.2}
+\contentsline {subsubsection}{\numberline {9.4.2.1}Power up and connection}{59}{subsubsection.9.4.2.1}
+\contentsline {subsubsection}{\numberline {9.4.2.2}Positioning system}{59}{subsubsection.9.4.2.2}
+\contentsline {subsection}{\numberline {9.4.3}Deploy control system}{60}{subsection.9.4.3}
+\contentsline {subsection}{\numberline {9.4.4}Ship docking procedure - after sailing}{61}{subsection.9.4.4}
+\contentsline {subsection}{\numberline {9.4.5}Troubleshooting}{62}{subsection.9.4.5}
+\contentsline {chapter}{\numberline {10}CS Saucer}{63}{chapter.10}
+\contentsline {section}{\numberline {10.1}Required Software}{63}{section.10.1}
+\contentsline {section}{\numberline {10.2}Deployment}{63}{section.10.2}
+\contentsline {section}{\numberline {10.3}NI Dashboard Manual Control}{63}{section.10.3}
+\contentsline {section}{\numberline {10.4}Manual Thruster Control}{64}{section.10.4}
+\contentsline {section}{\numberline {10.5}Manual Force Control}{64}{section.10.5}
+\contentsline {section}{\numberline {10.6}Data logging}{64}{section.10.6}
+\contentsline {section}{\numberline {10.7}Charging the Traxxas LiPo Battery}{65}{section.10.7}
+\contentsline {chapter}{\numberline {11}ROV Neptunus}{67}{chapter.11}
+\contentsline {part}{III\hspace {1em}Laboratory Staff Guide}{68}{part.3}
+\contentsline {chapter}{\numberline {12}cRIO-based control system setup}{69}{chapter.12}
+\contentsline {section}{\numberline {12.1}cRIO}{69}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Ethernet ports}{69}{subsection.12.1.1}
+\contentsline {subsubsection}{\numberline {12.1.1.1}Primary}{69}{subsubsection.12.1.1.1}
+\contentsline {subsubsection}{\numberline {12.1.1.2}Enabling the secondary ethernet port}{69}{subsubsection.12.1.1.2}
+\contentsline {subsection}{\numberline {12.1.2}Update cRIO software}{70}{subsection.12.1.2}
+\contentsline {subsubsection}{\numberline {12.1.2.1}Update}{70}{subsubsection.12.1.2.1}
+\contentsline {subsubsection}{\numberline {12.1.2.2}NI Veristand Engine}{73}{subsubsection.12.1.2.2}
+\contentsline {subsection}{\numberline {12.1.3}Create FPGA target and XML}{75}{subsection.12.1.3}
+\contentsline {subsubsection}{\numberline {12.1.3.1}Install in veristand}{78}{subsubsection.12.1.3.1}
+\contentsline {paragraph}{Ticks og s\IeC {\r a}nt}{80}{section*.100}
+\contentsline {paragraph}{VeriStand FPGA programming}{80}{section*.101}
+\contentsline {paragraph}{Analog input}{80}{section*.103}
+\contentsline {subsection}{\numberline {12.1.4}Installing custom device driver}{88}{subsection.12.1.4}
+\contentsline {paragraph}{Create}{88}{section*.104}
+\contentsline {paragraph}{Install}{88}{section*.105}
+\contentsline {section}{\numberline {12.2}Raspberry Pi}{91}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Raspbian installation and setup}{91}{subsection.12.2.1}
+\contentsline {subsubsection}{\numberline {12.2.1.1}Download operating system and utilities}{91}{subsubsection.12.2.1.1}
+\contentsline {subsubsection}{\numberline {12.2.1.2}Write image to SD card}{91}{subsubsection.12.2.1.2}
+\contentsline {subsubsection}{\numberline {12.2.1.3}Terminal access}{92}{subsubsection.12.2.1.3}
+\contentsline {subsubsection}{\numberline {12.2.1.4}Finalize configuration}{93}{subsubsection.12.2.1.4}
+\contentsline {subsubsection}{\numberline {12.2.1.5}Transfer files to RPi from computer}{94}{subsubsection.12.2.1.5}
+\contentsline {subsubsection}{\numberline {12.2.1.6}Set fixed IP address}{94}{subsubsection.12.2.1.6}
+\contentsline {subsection}{\numberline {12.2.2}Sixaxis installation and configuration}{95}{subsection.12.2.2}
+\contentsline {subsubsection}{\numberline {12.2.2.1}Download and install bluetooth support}{95}{subsubsection.12.2.2.1}
+\contentsline {subsubsection}{\numberline {12.2.2.2}Bluetooth pairing}{95}{subsubsection.12.2.2.2}
+\contentsline {subsubsection}{\numberline {12.2.2.3}Joystick manager system service}{96}{subsubsection.12.2.2.3}
+\contentsline {paragraph}{}{96}{section*.118}
+\contentsline {subsubsection}{\numberline {12.2.2.4}Joystick signal server}{96}{subsubsection.12.2.2.4}
+\contentsline {section}{\numberline {12.3}Laptop}{98}{section.12.3}
+\contentsline {subsection}{\numberline {12.3.1}Virtual machine image creation}{98}{subsection.12.3.1}
+\contentsline {subsubsection}{\numberline {12.3.1.1}Order of installation}{98}{subsubsection.12.3.1.1}
+\contentsline {subsection}{\numberline {12.3.2}Deploying the virtual machine}{99}{subsection.12.3.2}
+\contentsline {subsubsection}{\numberline {12.3.2.1}Free disk space}{99}{subsubsection.12.3.2.1}
+\contentsline {subsubsection}{\numberline {12.3.2.2}Virtual Box}{99}{subsubsection.12.3.2.2}
+\contentsline {subsubsection}{\numberline {12.3.2.3}MC Lab Virtual Machine}{99}{subsubsection.12.3.2.3}
+\contentsline {subsubsection}{\numberline {12.3.2.4}Common known problems}{99}{subsubsection.12.3.2.4}
+\contentsline {chapter}{\numberline {13}CS Enterprise I}{103}{chapter.13}
+\contentsline {section}{\numberline {13.1}Actuators}{104}{section.13.1}
+\contentsline {subsection}{\numberline {13.1.1}Motor control signals}{105}{subsection.13.1.1}
+\contentsline {subsection}{\numberline {13.1.2}Servo control signals}{105}{subsection.13.1.2}
+\contentsline {subsection}{\numberline {13.1.3}Measurements}{105}{subsection.13.1.3}
+\contentsline {section}{\numberline {13.2}Control software}{106}{section.13.2}
+\contentsline {subsection}{\numberline {13.2.1}sixaxis (currently named WL\_joystick) custom device}{106}{subsection.13.2.1}
+\contentsline {subsection}{\numberline {13.2.2}QTM (currently named Oqus) custom device}{106}{subsection.13.2.2}
+\contentsline {subsection}{\numberline {13.2.3}QTM2SI}{106}{subsection.13.2.3}
+\contentsline {subsection}{\numberline {13.2.4}ctrl\_sixaxis2thruster control module}{106}{subsection.13.2.4}
+\contentsline {subsubsection}{\numberline {13.2.4.1}Voith Schneider Propellers}{106}{subsubsection.13.2.4.1}
+\contentsline {subsubsection}{\numberline {13.2.4.2}Bow thruster}{107}{subsubsection.13.2.4.2}
+\contentsline {subsection}{\numberline {13.2.5}ctrl\_sixaxis2force control module}{107}{subsection.13.2.5}
+\contentsline {subsection}{\numberline {13.2.6}ctrl\_DP\_basic control module}{108}{subsection.13.2.6}
+\contentsline {subsection}{\numberline {13.2.7}ctrl\_student control module}{108}{subsection.13.2.7}
+\contentsline {subsection}{\numberline {13.2.8}switch module}{109}{subsection.13.2.8}
+\contentsline {subsection}{\numberline {13.2.9}uao2pwm module}{109}{subsection.13.2.9}
+\contentsline {subsection}{\numberline {13.2.10}FPGA interface}{110}{subsection.13.2.10}
+\contentsline {section}{\numberline {13.3}Qualisys body}{111}{section.13.3}
+\contentsline {part}{IV\hspace {1em}Miscellaneous }{114}{part.4}
+\contentsline {chapter}{\numberline {A}Simulation and control with cRIO}{115}{appendix.A}
+\contentsline {section}{\numberline {A.1}Simulink model adaptation and compilation}{115}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Modeling}{115}{subsection.A.1.1}
+\contentsline {subsubsection}{\numberline {A.1.1.1}Input and output}{115}{subsubsection.A.1.1.1}
+\contentsline {subsubsection}{\numberline {A.1.1.2}Initial conditions}{115}{subsubsection.A.1.1.2}
+\contentsline {subsubsection}{\numberline {A.1.1.3}Real-time data logging}{116}{subsubsection.A.1.1.3}
+\contentsline {paragraph}{Example:}{117}{figure.caption.143}
+\contentsline {subsection}{\numberline {A.1.2}Model configuration}{117}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Build}{118}{subsection.A.1.3}
+\contentsline {section}{\numberline {A.2}Simulation configuration}{120}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Project creation}{120}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}System setup}{121}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Create computer interface}{122}{subsection.A.2.3}
+\contentsline {section}{\numberline {A.3}Deployment and simulation}{125}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Run}{125}{subsection.A.3.1}
+\contentsline {subsection}{\numberline {A.3.2}User interface side data logging}{125}{subsection.A.3.2}
+\contentsline {subsection}{\numberline {A.3.3}Stop}{126}{subsection.A.3.3}
+\contentsline {subsection}{\numberline {A.3.4}FTP data retrieval}{126}{subsection.A.3.4}
+\contentsline {chapter}{\numberline {B}Device network addresses}{128}{appendix.B}
+\contentsline {chapter}{\numberline {C}ROV control modes}{129}{appendix.C}
+\contentsline {section}{\numberline {C.1}ROV dynamics}{129}{section.C.1}
+\contentsline {subsection}{\numberline {C.1.1}6 DOF model}{129}{subsection.C.1.1}
+\contentsline {subsection}{\numberline {C.1.2}Thruster configuration}{130}{subsection.C.1.2}
+\contentsline {subsubsection}{\numberline {C.1.2.1}Example: Minerva}{130}{subsubsection.C.1.2.1}
+\contentsline {section}{\numberline {C.2}ROV control modes}{131}{section.C.2}
+\contentsline {subsection}{\numberline {C.2.1}Direct Thruster Control}{132}{subsection.C.2.1}
+\contentsline {subsection}{\numberline {C.2.2}Direct Body Motion Control}{132}{subsection.C.2.2}
+\contentsline {subsubsection}{\numberline {C.2.2.1}Direct Body-relative motion}{133}{subsubsection.C.2.2.1}
+\contentsline {subsubsection}{\numberline {C.2.2.2}Direct NED-relative motion}{133}{subsubsection.C.2.2.2}
+\contentsline {subsubsection}{\numberline {C.2.2.3}Direct User-relative motion}{133}{subsubsection.C.2.2.3}
+\contentsline {subsection}{\numberline {C.2.3}Auto Control}{134}{subsection.C.2.3}
+\contentsline {subsection}{\numberline {C.2.4}Indirect Motion Control}{134}{subsection.C.2.4}
+\contentsline {subsection}{\numberline {C.2.5}Marine Operations Control}{134}{subsection.C.2.5}
+\contentsline {chapter}{\numberline {D}Personel and literature}{135}{appendix.D}
+\contentsline {section}{\numberline {D.1}Points of contact}{135}{section.D.1}
+\contentsline {chapter}{\numberline {E}Maintenance }{136}{appendix.E}
+\contentsline {chapter}{\numberline {F}Suppliers}{137}{appendix.F}

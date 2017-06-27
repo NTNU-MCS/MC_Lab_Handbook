@@ -1,0 +1,75 @@
+\begin{thebibliography}{14}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Follestad et~al.(2014)Follestad, Sandved, and
+  Valle}]{FollestadSandvedValle2014}
+Follestad, J., Sandved, F., Valle, E., 2014. Low cost rov design, based on
+  testing, simulations and analysis of {OpenROV}. Specialization project.
+
+\bibitem[{Idland(2015)}]{Idland2015}
+Idland, T.~K., 2015. Marine cybernetics vessel {CS} {S}aucer: Design,
+  construction and control. Master's thesis, Norwegian University of Science
+  and Technology.
+
+\bibitem[{KumarRobotics(2016)}]{KumarRobotics2016}
+KumarRobotics, 2016. Kumarrobotics/qualisys source code. Retrieved 10th of
+  March 2016. https://github.com/KumarRobotics/qualisys.
+
+\bibitem[{Linder et~al.(2015)Linder, Enqvist, Fossen, Johansen, and
+  Gustafsson}]{LinderEnqvistFossenJohansenGustafsson2015}
+Linder, J., Enqvist, M., Fossen, T.~I., Johansen, T.~A., Gustafsson, F., 2015.
+  Online estimation of ship's mass and center of mass using inertial
+  measurements. In: 10th Conference on Manoeuvring and Control of Marine Craft.
+
+\bibitem[{MathWorks(2016)}]{MathWorks2016}
+MathWorks, 2016. Create custom messages from ros package. Retrieved 10th of
+  March 2016.
+  http://se.mathworks.com/help/robotics/ug/create-custom-messages-from-ros-package.html.
+
+\bibitem[{Munz(2015)}]{Munz2015}
+Munz, J., 2015. Design and implementation of software for the {ROV} {N}eptunus.
+  Master's thesis, Norwegian University of Science and Technology.
+
+\bibitem[{Orsten(2014)}]{Orsten2014}
+Orsten, A., 2014. Automatic reliability-based control of iceberg towing in open
+  waters. Master's thesis, Norwegian University of Science and Technology.
+
+\bibitem[{Orsten et~al.(2014)Orsten, Norgren, and
+  Skjetne}]{OrstenNorgrenSkjetne2014}
+Orsten, A., Norgren, P., Skjetne, R., 2014. {LOS} guidance for towing an
+  iceberg along a straight-line path. In: Proceedings of the 22nd IAHR
+  International Symposium on ICE 2014 (IAHR-ICE 2014).
+
+\bibitem[{Sandved(2015)}]{Sandved2015}
+Sandved, F., 2015. Remote control and automatic path-following for {C/S}
+  {E}nterprise {I} and {ROV} {N}eptunus. Master's thesis, Norwegian University
+  of Science and Technology.
+
+\bibitem[{Sk{\aa}tun(2011)}]{Skaatun2011}
+Sk{\aa}tun, H.~N., 2011. Development of a {DP} system for {CS} {E}nterprise {I}
+  with {V}oith {S}chneider thrusters. Master's thesis, Norwegian University of
+  Science and Technology.
+
+\bibitem[{Sk{\aa}tun(2014)}]{Skaatun2014}
+Sk{\aa}tun, H.~N., 2014. {CS} {E}nterprise {I}. Video,
+  http://www.youtube.com/watch?v=MiESJsIZO04.
+
+\bibitem[{Tran(2013)}]{Tran2013}
+Tran, N.~D., 2013. Development of a modularized control architecture for {CS}
+  {E}nterprise {I} for path-following based on {LOS} and maneuvering theory.
+  Specialization project.
+
+\bibitem[{Tran(2014)}]{Tran2014}
+Tran, N.~D., 2014. Line-of-sight-based maneuvering control design,
+  implementation, and experimental testing for the model ship {C/S}
+  {E}nterprise {I}. Master's thesis, Norwegian University of Science and
+  Technology.
+
+\bibitem[{Valle(2015)}]{Valle2015}
+Valle, E., 2015. Marine telepresence system. Master's thesis, Norwegian
+  University of Science and Technology.
+
+\end{thebibliography}
