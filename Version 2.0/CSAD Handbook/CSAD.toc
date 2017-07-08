@@ -1,0 +1,39 @@
+\contentsline {section}{Preface}{ii}{figure.caption.1}
+\contentsline {section}{Structure of document}{ii}{section*.2}
+\contentsline {part}{I\hspace {1em}Technical description}{2}{part.1}
+\contentsline {chapter}{\numberline {1}Hardware}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction to CSAD}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Literature}{3}{subsection.1.1.1}
+\contentsline {subsubsection}{Journals and conferences}{4}{section*.6}
+\contentsline {subsubsection}{Specialization projects and master theses}{4}{section*.7}
+\contentsline {section}{\numberline {1.2}Actuators}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Power system}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}IMU}{5}{section.1.4}
+\contentsline {section}{\numberline {1.5}Control system}{7}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}cRIO}{8}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}RPi}{8}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.3}ESC and DC-motor}{8}{subsection.1.5.3}
+\contentsline {subsection}{\numberline {1.5.4}Servo}{9}{subsection.1.5.4}
+\contentsline {section}{\numberline {1.6}High-level communication}{9}{section.1.6}
+\contentsline {chapter}{\numberline {2}Software}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Control system}{11}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}ctrl\textunderscore custom}{11}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}ctrl\textunderscore TAPM}{12}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}ctrl\textunderscore sixaxis2thruster}{12}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}STOP}{12}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}u2pwm}{12}{subsection.2.2.5}
+\contentsline {subsubsection}{Switch}{13}{section*.20}
+\contentsline {subsubsection}{Saturation}{13}{section*.21}
+\contentsline {subsubsection}{Low-pass}{13}{section*.22}
+\contentsline {subsubsection}{Mapping}{13}{section*.23}
+\contentsline {subsection}{\numberline {2.2.6}Oqus}{13}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}WL\textunderscore Joystick}{13}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}FPGA}{13}{subsection.2.2.8}
+\contentsline {section}{\numberline {2.3}Connecting software}{14}{section.2.3}
+\contentsline {chapter}{\numberline {3}Modeling}{15}{chapter.3}
+\contentsline {part}{II\hspace {1em}User Manual}{16}{part.2}
+\contentsline {chapter}{\numberline {4}Launching}{18}{chapter.4}
+\contentsline {chapter}{\numberline {5}Controlling}{19}{chapter.5}
+\contentsline {chapter}{\numberline {6}Demolition}{20}{chapter.6}
+\contentsline {chapter}{Bibliography}{21}{chapter.6}

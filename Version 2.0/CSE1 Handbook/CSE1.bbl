@@ -1,0 +1,58 @@
+\begin{thebibliography}{11}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{{Analog Devices}(2017)}]{adis16364}
+{Analog Devices}, 2017. Adis16364 data sheet. Tech. rep.
+\newline\urlprefix\url{http://www.analog.com/media/en/technical-documentation/data-sheets/ADIS16364.pdf}
+
+\bibitem[{Bj{\o}rne(2016)}]{bjorne2016nonlinear}
+Bj{\o}rne, E.~S., 2016. Nonlinear adaptive motion control and model-error
+  analysis for ships-simulations and mclab experiments. Master's thesis, NTNU.
+
+\bibitem[{Mykland(2017)}]{mykland2017}
+Mykland, A., 2017. Low-cost observer and path-following adaptive autopilot for
+  ships. Master's thesis, NTNU.
+
+\bibitem[{Orsten(2014)}]{Orsten2014}
+Orsten, A., 2014. Automatic reliability-based control of iceberg towing in open
+  waters. Master's thesis, Norwegian University of Science and Technology.
+
+\bibitem[{Orsten et~al.(2014)Orsten, Norgren, and
+  Skjetne}]{OrstenNorgrenSkjetne2014}
+Orsten, A., Norgren, P., Skjetne, R., 2014. {LOS} guidance for towing an
+  iceberg along a straight-line path. In: Proceedings of the 22nd IAHR
+  International Symposium on ICE 2014 (IAHR-ICE 2014).
+
+\bibitem[{Sandved(2015)}]{Sandved2015}
+Sandved, F., 2015. Remote control and automatic path-following for {C/S}
+  {E}nterprise {I} and {ROV} {N}eptunus. Master's thesis, Norwegian University
+  of Science and Technology.
+
+\bibitem[{Sk{\aa}tun(2011)}]{Skaatun2011}
+Sk{\aa}tun, H.~N., 2011. Development of a {DP} system for {CS} {E}nterprise {I}
+  with {V}oith {S}chneider thrusters. Master's thesis, Norwegian University of
+  Science and Technology.
+
+\bibitem[{Sk{\aa}tun(2014)}]{Skaatun2014}
+Sk{\aa}tun, H.~N., 2014. {CS} {E}nterprise {I}. Video,
+  http://www.youtube.com/watch?v=MiESJsIZO04.
+
+\bibitem[{Tran(2013)}]{Tran2013}
+Tran, N.~D., 2013. Development of a modularized control architecture for {CS}
+  {E}nterprise {I} for path-following based on {LOS} and maneuvering theory.
+  Specialization project.
+
+\bibitem[{Tran(2014)}]{Tran2014}
+Tran, N.~D., 2014. Line-of-sight-based maneuvering control design,
+  implementation, and experimental testing for the model ship {C/S}
+  {E}nterprise {I}. Master's thesis, Norwegian University of Science and
+  Technology.
+
+\bibitem[{Valle(2015)}]{Valle2015}
+Valle, E., 2015. Marine telepresence system. Master's thesis, Norwegian
+  University of Science and Technology.
+
+\end{thebibliography}

@@ -1,0 +1,23 @@
+\begin{thebibliography}{4}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{{Analog Devices}(2017)}]{adis16364}
+{Analog Devices}, 2017. Adis16364 data sheet. Tech. rep.
+\newline\urlprefix\url{http://www.analog.com/media/en/technical-documentation/data-sheets/ADIS16364.pdf}
+
+\bibitem[{Bj{\o}rn{\o}(2016)}]{bjorno2016thruster}
+Bj{\o}rn{\o}, J., 2016. Thruster-assisted position mooring of c/s inocean cat i
+  drillship. Master's thesis, NTNU.
+
+\bibitem[{Frederich(2016)}]{frederich2016constrained}
+Frederich, P., 2016. Constrained optimal thrust allocation for c/s inocean cat
+  i drillship. Master's thesis, NTNU.
+
+\bibitem[{Udjus(2017)}]{udjus2017}
+Udjus, G., 2017. Force field identification and positioning control of an
+  autonomous vessel using inertial measurement units. Master's thesis, NTNU.
+
+\end{thebibliography}

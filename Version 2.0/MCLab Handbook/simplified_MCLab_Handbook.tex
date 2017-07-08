@@ -445,10 +445,18 @@ The wave maker is a single paddle wave making machine with a width of 6 meter an
 	\end{tabular}\caption{\label{tab:Wave generator capacity-1}Wave generator capacity}
 \end{table}
 \subsection{User Manual}
-\todo{Add a description on how to use the system}
+\todo{Add a description on how to use the system once the NEW wave generator is installed(fall 2017)}
 \clearpage{}
-\section{Video-Camera}
-The laboratory is equipped with 2 high-resolution cameras for recording of activity in the basin, one on each side. The cameras are remotely operated from a dedicated PC in the command center, connected to the TV-monitor mounted on the wall. The computer is located on the floor, with wireless mouse and keyboard connected to it(labeled \textit{Camera system}). \todo{add description on how-to-use camera system, i.e. how to auto-track, still, record and export recorded movies. }
+\section{Video-Camera System}
+The laboratory is equipped with 2 high-resolution cameras for recording of activity in the basin, one on each side. The cameras are remotely operated from a dedicated PC in the command center using the \textit{Intelligent Video Management System 4200 (iVMS-4200 client)} software. The computer is located on the floor, is connected to the TV-monitor mounted on the wall, and has wireless mouse and keyboard(labeled \textit{Camera system}). The software user-interface is illustrated in Figure \ref{fig:userinterface_iVMS-4200}. 
+
+The manual control of the cameras are found in the \textit{PTZ Control} tab. The cameras feature auto-tracking of objects, which is enabled by right-clicking in the video window. The menu is illustrated in Figure \ref{fig:userinterface_iVMS-4200}, with highlighted options for auto-tracking and manual control of the camera position. 
+The camera system also support recording. Note that the recorded files are large, typically several GB for some minutes of recorded video. Hence, the files should be \textit{moved} to a USB-disk(and not copied). The recorded files are found in the path: \path{C:\ivms4200\video\RecordFile\YYYYMMDD}.
+\begin{figure}[htb!]
+	\centerline{\includegraphics[width=1.4\linewidth]{fig/Camera_userinterface.png}}
+	\caption{User interface iVMS-4200 camera system}
+	\label{fig:userinterface_iVMS-4200}
+\end{figure}
 
 \clearpage
 \bibliographystyle{elsarticle-harv}

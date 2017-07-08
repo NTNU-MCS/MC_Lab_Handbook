@@ -1,0 +1,87 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en-US
+
+
+% This is the root file of your thesis: thesis.tex
+% A line starting with % is a comment. In some cases, I have included a command preceded by a %. You may activate the command by removing the %.
+
+%%===================================
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc} % This defines the font-encoding you prefer to use
+\usepackage{fourier}
+\pagestyle{headings}
+\usepackage{marvosym}
+\usepackage[pdftex]{graphicx}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{todonotes}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{gensymb}
+%\usepackage[numbers]{natbib} % Use this command if you want to refer to the literature by numbers, e.g., [1]
+\usepackage{setspace}
+\linespread{1.5}
+
+\newenvironment{remark}{\par\mbox{}\par\noindent{\bfseries \emph{Remark}\/}:\normalfont}{\par}
+\newenvironment{defin}{\par\mbox{}\par\noindent\bfseries \emph{\Pointinghand\ }\normalfont}{\par}
+\setcounter{tocdepth}{2} 
+\usepackage[colorlinks=true, a4paper=true, pdfstartview=FitV,
+linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+\pdfcompresslevel=9
+
+%%===================================
+\begin{document}
+\thispagestyle{empty}
+
+\vspace*{3cm}
+
+\begin{center}
+	{\LARGE{}CyberShip Enterprise I}
+	\par\end{center}{\LARGE \par}
+
+\begin{center}
+	{\LARGE{}User Manual }
+	\par\end{center}{\LARGE \par}
+
+\begin{figure*}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{fig/CSE1.png}
+\end{figure*}
+
+\begin{flushleft}
+	\vfill{}
+	\par\end{flushleft}
+
+\begin{flushleft}
+	\includegraphics[scale=0.6]{fig/NTNU_logo.pdf}
+	\par\end{flushleft}
+Faculty of Engineering Science and Technology\\
+Department of Marine Technology
+
+\clearpage{}%\thispagestyle{empty}\vspace*{3cm}
+
+\setcounter{page}{0}
+\pagenumbering{roman}
+\include{preface_summary}
+\tableofcontents
+\setcounter{page}{0}
+\pagenumbering{arabic}
+\include{technical}
+\include{operation}
+
+%%=========================================
+%\appendix
+%\include{appendix-b}
+%%=========================================
+\bibliographystyle{elsarticle-harv}
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{refs}  
+%%=========================================
+
+\end{document}

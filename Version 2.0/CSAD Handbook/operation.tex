@@ -1,0 +1,17 @@
+\part{User Manual}\label{part2}
+It is assumed that the reader has studied the MCLab Handbook before using CSE1, and has knowledge about Lab procedures and Safety precautions. 
+\chapter{Launching}
+\textit{Describe hardware preparations, establishing connection, building and including simulink model, uploading code to vessel}
+The following list is important to keep in mind when operating CSE1:
+\begin{description}
+	\item [{Water~damage:}] CSE1 is not waterproof and has excessive thrust capability which can inflict large roll angles. The risk of water on deck is reduced through thrust limitation and HIL testing before application of new control algorithms. 
+	\item [{Propeller~dry~running:}] BT must only be run in water. Before removing the vessel from the water, the control system must be stopped and the VeriStand project undeployed.
+	\item [{Loss~of~laptop~control:}] Wireless network instability may result in loss of connection between the laptop user interface and the cRIO. In this event, fall back to manual thruster control, by pushing \includegraphics[scale=0.4]{fig/sixaxis_triangle} on the Sixaxis.
+	\item [{Total~loss~of~control:}] Pull CSE1 with a boat hook, and keep the vessel in water while disconnecting batteries.
+\end{description}
+
+
+\chapter{Controlling}
+Give some instructions on the control mode, user interface in VeriStand, etc
+\chapter{Demolition}
+Deploying and shut-down procedure. Clean lab. 

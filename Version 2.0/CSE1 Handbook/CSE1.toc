@@ -1,0 +1,50 @@
+\contentsline {section}{Preface}{i}{figure.caption.1}
+\contentsline {section}{Structure of document}{i}{section*.2}
+\contentsline {section}{CSE1 main data}{i}{section*.3}
+\contentsline {part}{I\hspace {1em}Technical description}{2}{part.1}
+\contentsline {chapter}{\numberline {1}Hardware}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction to CSE1}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Literature}{3}{subsection.1.1.1}
+\contentsline {subsubsection}{Journals and conferences}{4}{section*.7}
+\contentsline {subsubsection}{Specialization projects and master theses}{4}{section*.8}
+\contentsline {subsubsection}{Other}{4}{section*.9}
+\contentsline {section}{\numberline {1.2}Actuators}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Power system}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}IMU}{6}{section.1.4}
+\contentsline {section}{\numberline {1.5}Control system}{7}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}cRIO}{7}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}RPi}{8}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.3}ESC}{9}{subsection.1.5.3}
+\contentsline {section}{\numberline {1.6}High-level communication}{9}{section.1.6}
+\contentsline {chapter}{\numberline {2}Software}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Control system}{12}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}ctrl\textunderscore custom}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}ctrl\textunderscore DP}{13}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}ctrl\textunderscore sixaxis2thruster}{13}{subsection.2.2.3}
+\contentsline {subsubsection}{Voith Schneider Propellers}{13}{section*.19}
+\contentsline {subsubsection}{Bow thruster}{14}{section*.21}
+\contentsline {subsection}{\numberline {2.2.4}ctrl\textunderscore sixaxis2direction}{14}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}u2pwm}{14}{subsection.2.2.5}
+\contentsline {subsubsection}{Switch}{15}{section*.23}
+\contentsline {subsubsection}{Saturation}{15}{section*.24}
+\contentsline {subsubsection}{Low-pass}{16}{section*.26}
+\contentsline {subsubsection}{Mapping}{16}{section*.27}
+\contentsline {paragraph}{Tuning of servos}{17}{section*.31}
+\contentsline {subsection}{\numberline {2.2.6}Oqus}{18}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}WL\textunderscore Joystick}{18}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}FPGA}{18}{subsection.2.2.8}
+\contentsline {section}{\numberline {2.3}Connecting software}{19}{section.2.3}
+\contentsline {chapter}{\numberline {3}Modeling}{20}{chapter.3}
+\contentsline {part}{II\hspace {1em}User Manual}{23}{part.2}
+\contentsline {chapter}{\numberline {4}Launching}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Update customized simulink code}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Vessel and lab preparations}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Upload VeriStand project to the vessel}{28}{section.4.3}
+\contentsline {chapter}{\numberline {5}Operation}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Workspace}{31}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Data logging}{32}{subsection.5.1.1}
+\contentsline {paragraph}{In Workspace}{32}{section*.42}
+\contentsline {paragraph}{In Simulink}{32}{section*.44}
+\contentsline {chapter}{\numberline {6}Demolition}{34}{chapter.6}
+\contentsline {chapter}{Bibliography}{35}{Item.33}
