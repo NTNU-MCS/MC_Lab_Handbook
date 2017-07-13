@@ -18,10 +18,10 @@ The vessel is a 1:90 scale model of the Statoil Cat I Arctic Drillship. It is eq
 \end{table}
 
 \subsection{Literature}
-The development of CSAD and its systems is a product of research from several theses, which contain complementary information on the theory applied to the system. 
+The development of CSAD and its systems is a product of research from several theses, which contain complementary information on the theory applied to the system. The vessel has also been used in experiments for papers. 
 \subsubsection{Journals and conferences}
 \begin{itemize}
-	\item 
+	\item Distributed motion sensing on ships \citep{heyn2017}
 \end{itemize}
 \subsubsection{Specialization projects and master theses}
 \begin{itemize}
@@ -141,7 +141,17 @@ The Raspberry Pi provides communication with the Siaxaxis controller, as describ
 
 If there are problems establishing connection between Sixaxis and RPi, try restarting the RPi. If this doesn't work, contact Torgeir Wahl or see the MCLab Handbook on Github for description on how to reconfigure the RPi.
 \subsection{ESC and DC-motor}
-The ESC's are of the type O.S. OCA-150 50 A BL, connected to brushless UMA-2820-950 DC motors driving the thrusters. The ESC's are controlled with PWM signals. As the motors are much more powerful than desired for the model, the PWM signal is constrained. Table \ref{tab:PWM_constraints} gives the constraints on the PWM signal. \todo{Verify the PWM constraints}
+The ESC's are of the type O.S. OCA-150 50 A BL, connected to brushless UMA-2820-950 DC motors driving the thrusters. The ESC's are controlled with PWM signals. As the motors are much more powerful than desired for the model, the PWM signal is constrained. Table \ref{tab:pwm_spec} gives the specification on the PWM signal for the ESC connected to the propellers, and Table \ref{tab:PWM_constraints} gives the constraints on the PWM signal. \todo{Verify the PWM constraints}
+\begin{table}[h!]
+	\centering
+	\caption{PWM specification for ESC}
+	\label{tab:pwm_spec}
+	\begin{tabular}{cccc}
+		\hline
+		\textbf{Initial value} & \textbf{Scaling} & \textbf{Offset} & \textbf{PWM period} [Ticks] \\ \hline
+		0 & 100 & 0 & 800.000\\ \hline
+	\end{tabular}
+\end{table}
 \begin{table}[htb!]
 	\centering
 	\caption{PWM constraints}
@@ -224,7 +234,12 @@ All 6 thruster can be controlled manually using the Sixaxis controller. The righ
 \subsection{STOP}
 This system simply stops the vessel, by setting the thrust of all thrusters to 0. 
 \subsection{u2pwm}
-This code transforms the control input to PWM signals, which are sent to the FPGA module. There are 2 groups of inputs, namely the control signal and a switch signal. The switch signal is used to switch between the 4 control systems described previously. Switching is simply achieved by pressing either one of the four symbols, and the mapping between the buttons and models is shown in Figure \ref{fig: CSE1 software}. The code is not supposed to be altered, and should work as it is. 
+This code transforms the control input to PWM signals, which are sent to the FPGA module. There are 2 groups of inputs, namely the control signal and a switch signal. The switch signal is used to switch between the 4 control systems described previously. Switching is simply achieved by pressing either one of the four symbols, and the mapping between the buttons and models is shown in Figure \ref{fig: CSE1 software}. The code is not supposed to be altered, and should work as it is. Figure \ref{fig:u2pwm} illustrate how the code works, and the different parts are described in the latter. 
+\begin{figure}[htb!]
+	\centerline{\includegraphics[width=1.1\textwidth]{fig/u2pwm.pdf}}
+	\caption{Schematic of u2pwm}
+	\label{fig:u2pwm}
+\end{figure}
 
 \subsubsection{Switch}
 The switch simply forward the input from the desired model, as given by the switch signal:
@@ -235,18 +250,123 @@ The switch simply forward the input from the desired model, as given by the swit
 	\item ctrl\_student when \includegraphics[scale=0.4]{fig/sixaxis_cross} is pushed
 \end{itemize}
 \subsubsection{Saturation}
-
-\subsubsection{Low-pass}
-\subsubsection{Mapping}
+The inputs are saturated to avoid overload on the thrusters. All inputs are saturated as given in Table \ref{tab:saturation}. 
+\begin{table}[htb!]
+	\centering
+	\caption{Saturation of input}
+	\label{tab:saturation}
+	\begin{tabular}{ccc}
+		\hline
+		\textbf{min} & \textbf{Variable} & \textbf{max}\\ \hline
+		$-0.5\le $ & u &$\le 0.5$ \\ \hline
+	\end{tabular}
+\end{table}
+\subsubsection{Mecl-el}
+This block simulates an mechanical-electrical system, by use of a transfer function as. The transfer function is equal for all variables, and the time constant is set to 1. By default, this block is not active, and must be activated in the Workspace. There is a NI VeriStand Input, named "mech el enable", which activates the block. Using this block will make the vessel behave more realistic. 
+\subsubsection{Wrapping}
+This block simply calculates the shortest distance for the thrusters, when they have a new desired angle. As the thruster can rotate both clock-wise and counter-clock wise, the wrapping block makes sure the thrusters rotate in the shortest direction. 
 
 \subsection{Oqus}
 The Qualisys Track Manager software broadcast the position data of the vessel over MC Lab Wifi. Reading these data is done on the cRIO through a Custom Device module named Oqus. The Oqus software simply listen to the network for data from QTM, and once it receives data it forward the position and orientation to the models as given in Figure \ref{fig: CSE1 software}. The Custom Device is programmed by Torgeir Wahl, and can be found on GitHub. 
 \subsection{WL\textunderscore Joystick}
 This is the second Custom Device that runs on the cRIO, which listen to the Ethernet 2 port for input from the RPi. It forwards this data to the respective models as given in Figure \ref{fig: CSE1 software}. The software is designed by Torgeir Wahl, and can be found on GitHub. 
 \subsection{FPGA}
-For the CSE1, 3 FPGA modules are in use(1 for analog signals, 1 for digital signals and 1 for reading IMU data). The FPGA software is described in the MC Lab Software Handbook, and provides a guide on how to create an FPGA module. The modules can be found on GitHub, but are as standard. The PWM signal is mapped as described in Table
+For CSAD, 8 FPGA modules are in use. The FPGA software is described in the MC Lab Software Handbook, and provides a guide on how to create an FPGA module. The modules can be found on GitHub, but are as standard. The PWM signal is mapped as described in Table \ref{tab:pwm_mapping}. 
+\begin{table}[htb!]
+	\centering
+	\caption{PWM mapping}
+	\label{tab:pwm_mapping}
+	\begin{tabular}{|cc|c|cc|}
+		\cline{1-2}\cline{4-5}
+		\textbf{u2pwm} & \textbf{FPGA PWM} & \qquad \qquad \qquad & \textbf{u2pwm} & \textbf{FPGA Thruster} \\ \cline{1-2}\cline{4-5}
+		pwm\_u\_1 & PWM Out 0 & & alpha\_1 & Angle0 \\
+		pwm\_u\_2 & PWM Out 1 & & alpha\_2 & Angle1\\
+		pwm\_u\_3 & PWM Out 2 & & alpha\_3 & Angle2\\
+		pwm\_u\_4 & PWM Out 3 & & alpha\_4 & Angle3\\
+		pwm\_u\_5 & PWM Out 4 & & alpha\_5 & Angle4\\
+		pwm\_u\_6 & PWM Out 5 & & alpha\_6 & Angle5\\
+		\cline{1-2}\cline{4-5}
+	\end{tabular}
+\end{table}
+
 
 \section{Connecting software}
-All the different software parts described in the previous Section are connected together in VeriStand. On CSAD, VeriStand 2017 is used. In the system definition file \textit{CSE1.nivssddf}, all necessary mappings of variables are done. In addition, here the different Custom Devices, FPGA code and Simulink Models can be included. However, the standard setup should not be altered, as all necessary code and mappings is already taken care of. For description on how to implement the modified ctrl\textunderscore student Simulink model, the reader is referred to Part \ref{part2}. 
+All the different software parts described in the previous Section are connected together in VeriStand. On CSAD, VeriStand 2017 is used. In the system definition file \textit{CSAD.nivssddf}, all necessary mappings of variables are done. In addition, here the different Custom Devices, FPGA code and Simulink Models can be included. However, the standard setup should not be altered, as all necessary code and mappings is already taken care of. For description on how to implement the modified \textit{ctrl\textunderscore custom} Simulink model, the reader is referred to Part \ref{part2}. 
 \chapter{Modeling}
-The mathematical model of CSE1 is given here, based on system identification done in previous Master's Theses. The model is valid for low-speed. The proposed control design model is
+\section{3 DOF Maneuvering model}
+Here, a 3DOF model of the vessel is presented. For complementary information on the procedure and accuracy, the reader is referred to \cite{bjorno2016thruster}. The 3DOF model is based on system identification from towing tests in MC-Lab. The model is valid for low speed, and it is noteworthy that the presented model does not include cross-coupled damping terms. The model is based on the standard 3DOF maneuvering model from \cite{fossen2011handbook}: 
+\begin{align}
+	\bm{\dot{\eta}}&=\textbf{R}(\psi)\bm{\nu}\\
+	\textbf{M}\bm{\dot{\nu}+\textbf{C}(\bm{\nu})\bm{\nu}+\textbf{D}(\bm{\nu})\bm{\nu}}&=\bm{\tau}_{env}+\bm{\tau}_{thruster}
+\end{align}
+where $\bm{\eta}=[x,y,\psi]^T \in \mathbb{R}^3$, $\bm{\nu}=[u,v,r]^T \in \mathbb{R}^3$ and $\bm{\tau}=[X,Y,N]\in \mathbb{R}^3$. The matrices are
+\begin{equation}
+	\textbf{R}(\psi)=\left[ \begin{tabular}{ccc}
+	$cos(\psi)$ & $-sin(\psi)$ & 0\\
+	$sin (\psi)$ & $cos (\psi)$ & 0\\
+	0 & 0 & 1
+	\end{tabular} \right]
+\end{equation}
+\begin{equation}
+	\textbf{M}=\textbf{M}_{RB}+\textbf{M}_{A}=\left[ \begin{tabular}{ccc}
+	$m-X_{\dot{u}}$ & 0 & 0\\
+	0 & $m-Y_{\dot{v}}$ & $mx_g-Y_{\dot{r}}$\\
+	0 & $mx_g-Y_{\dot{r}}$ & $I_z-N_{\dot{r}}$ 
+	\end{tabular} \right] = \textbf{M}^T > 0
+\end{equation}
+\begin{equation}
+	\textbf{C}(\bm{\nu})= \textbf{C}_{RB}(\bm{\nu})+\textbf{C}_A(\bm{\nu})=\left[ \begin{tabular}{ccc}
+	0 & $ 0 $ & $(-mx_g+Y_{\dot{r}})r+(-m+Y_{\dot{v}})v$\\
+	0 & 0 & $(m-X_{\dot{u}})u$\\
+	$(mx_g-Y_{\dot{r}})r+(m-Y_{\dot{v}})v $ & $(-m+X_{\dot{u}})u$ & 0\\
+	\end{tabular} \right]
+\end{equation}
+\begin{equation}
+	\textbf{D}(\bm{\nu})=\textbf{D}+\textbf{D}(\bm{\nu})=-\left[\begin{tabular}{ccc}
+	$d_{11}(u)$ & 0 & 0\\
+	0 & $d_{22}(v)$ & $d_{23}(r)$\\
+	0 & $d_{32}(v)$ & $d_{33}(r)$\\
+	\end{tabular}
+	\right]
+\end{equation}
+The damping coefficients are 
+\begin{align}
+	d_{11}(u)&=X_u+X_{|u|u}|u|+X_{uuu}u^2\\
+	d_{22}(v,r)&=Y_v+Y_{|v|v}|v|+Y_{vvv}v^2\\
+	d_{23}(v,r)&=Y_r+Y_{|r|r}|r|+Y_{rrr}r^2\\
+	d_{32}(v,r)&=N_v+N_{|v|v}|v|+N_{vvv}v^2\\
+	d_{33}(v,r)&=N_r+N_{|r|r}|r|+N_{rrr}r^2
+\end{align}
+The rigid body and added mass parameters are given in Table \ref{tab:rigid_body}, and the drag coefficients are given in Table \ref{tab:drag_coeff}. 
+\begin{table}[h!]
+	\centering
+	\caption{Rigid body and added mass parameters}
+	\label{tab:rigid_body}
+	\begin{tabular}{|cc|c|cc|}
+		\cline{1-2}\cline{4-5}
+		\multicolumn{2}{|c|}{Rigid body} & \qquad \qquad \qquad & \multicolumn{2}{|c|}{Added mass}\\
+		Parameter & Value & & Parameter & Value\\
+		\cline{1-2}\cline{4-5}
+		$m$ & 127.92 & & $X_{\dot{u}}$ & 3.262\\
+		$I_z$ & 61.967 & & $Y_{\dot{v}}$ & 28.89\\
+		$x_g$ & 0 & & $Y_{\dot{r}}$ & 0.525\\
+		& & & $N_{\dot{v}}$ & 0.157\\
+		& & & $N_{\dot{r}}$& 13.98\\
+		\cline{1-2}\cline{4-5}
+	\end{tabular}
+\end{table}
+\begin{table}[h!]
+	\centering
+	\caption{Drag coefficients in surge, sway and yaw}
+	\label{tab:drag_coeff}
+	\begin{tabular}{|cc|c|cc|c|cc|}
+		\cline{1-2}\cline{4-5}\cline{7-8}
+		\multicolumn{2}{|c|}{Surge} & \qquad & \multicolumn{2}{|c|}{Sway}& \qquad & \multicolumn{2}{|c|}{Yaw}\\
+		Parameter & Value & & Parameter & Value & & Parameter & Value\\
+		\cline{1-2}\cline{4-5}\cline{7-8}
+		$X_u$ & -2.332 & & $Y_v$ & -4.673 & & $N_r$ & -0.01675\\
+		$X_{|u|u}$ & 0 & & $Y_{|v|v}$ & 0.3976 & & $N_{|r|r}$ & -0.01148\\
+		$X_{uuu}$ & -8.557 & & $Y_{vvv}$ & 313.3 & & $N_{rrr}$ & 0.0003578\\
+		\cline{1-2}\cline{4-5}\cline{7-8}
+	\end{tabular}
+\end{table}

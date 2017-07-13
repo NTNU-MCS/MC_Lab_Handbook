@@ -1,33 +1,40 @@
 \BOOKMARK [1][-]{figure.caption.1}{Preface}{}% 1
 \BOOKMARK [1][-]{section*.2}{Structure of document}{}% 2
-\BOOKMARK [-1][-]{part.1}{I Technical description}{}% 3
-\BOOKMARK [0][-]{chapter.1}{Hardware}{part.1}% 4
-\BOOKMARK [1][-]{section.1.1}{Introduction to CSAD}{chapter.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.1}{Literature}{section.1.1}% 6
-\BOOKMARK [1][-]{section.1.2}{Actuators}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.3}{Power system}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.4}{IMU}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.5}{Control system}{chapter.1}% 10
-\BOOKMARK [2][-]{subsection.1.5.1}{cRIO}{section.1.5}% 11
-\BOOKMARK [2][-]{subsection.1.5.2}{RPi}{section.1.5}% 12
-\BOOKMARK [2][-]{subsection.1.5.3}{ESC and DC-motor}{section.1.5}% 13
-\BOOKMARK [2][-]{subsection.1.5.4}{Servo}{section.1.5}% 14
-\BOOKMARK [1][-]{section.1.6}{High-level communication}{chapter.1}% 15
-\BOOKMARK [0][-]{chapter.2}{Software}{part.1}% 16
-\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.2}{Control system}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.2.1}{ctrl\137custom}{section.2.2}% 19
-\BOOKMARK [2][-]{subsection.2.2.2}{ctrl\137TAPM}{section.2.2}% 20
-\BOOKMARK [2][-]{subsection.2.2.3}{ctrl\137sixaxis2thruster}{section.2.2}% 21
-\BOOKMARK [2][-]{subsection.2.2.4}{STOP}{section.2.2}% 22
-\BOOKMARK [2][-]{subsection.2.2.5}{u2pwm}{section.2.2}% 23
-\BOOKMARK [2][-]{subsection.2.2.6}{Oqus}{section.2.2}% 24
-\BOOKMARK [2][-]{subsection.2.2.7}{WL\137Joystick}{section.2.2}% 25
-\BOOKMARK [2][-]{subsection.2.2.8}{FPGA}{section.2.2}% 26
-\BOOKMARK [1][-]{section.2.3}{Connecting software}{chapter.2}% 27
-\BOOKMARK [0][-]{chapter.3}{Modeling}{part.1}% 28
-\BOOKMARK [-1][-]{part.2}{II User Manual}{}% 29
-\BOOKMARK [0][-]{chapter.4}{Launching}{part.2}% 30
-\BOOKMARK [0][-]{chapter.5}{Controlling}{part.2}% 31
-\BOOKMARK [0][-]{chapter.6}{Demolition}{part.2}% 32
-\BOOKMARK [0][-]{chapter.6}{Bibliography}{part.2}% 33
+\BOOKMARK [1][-]{section*.3}{CSAD main data}{}% 3
+\BOOKMARK [-1][-]{part.1}{I Technical description}{}% 4
+\BOOKMARK [0][-]{chapter.1}{Hardware}{part.1}% 5
+\BOOKMARK [1][-]{section.1.1}{Introduction to CSAD}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.1}{Literature}{section.1.1}% 7
+\BOOKMARK [1][-]{section.1.2}{Actuators}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.3}{Power system}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.4}{IMU}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.5}{Control system}{chapter.1}% 11
+\BOOKMARK [2][-]{subsection.1.5.1}{cRIO}{section.1.5}% 12
+\BOOKMARK [2][-]{subsection.1.5.2}{RPi}{section.1.5}% 13
+\BOOKMARK [2][-]{subsection.1.5.3}{ESC and DC-motor}{section.1.5}% 14
+\BOOKMARK [2][-]{subsection.1.5.4}{Servo}{section.1.5}% 15
+\BOOKMARK [1][-]{section.1.6}{High-level communication}{chapter.1}% 16
+\BOOKMARK [0][-]{chapter.2}{Software}{part.1}% 17
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.2}{Control system}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.1}{ctrl\137custom}{section.2.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.2}{ctrl\137TAPM}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.3}{ctrl\137sixaxis2thruster}{section.2.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.4}{STOP}{section.2.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.5}{u2pwm}{section.2.2}% 24
+\BOOKMARK [2][-]{subsection.2.2.6}{Oqus}{section.2.2}% 25
+\BOOKMARK [2][-]{subsection.2.2.7}{WL\137Joystick}{section.2.2}% 26
+\BOOKMARK [2][-]{subsection.2.2.8}{FPGA}{section.2.2}% 27
+\BOOKMARK [1][-]{section.2.3}{Connecting software}{chapter.2}% 28
+\BOOKMARK [0][-]{chapter.3}{Modeling}{part.1}% 29
+\BOOKMARK [1][-]{section.3.1}{3 DOF Maneuvering model}{chapter.3}% 30
+\BOOKMARK [-1][-]{part.2}{II User Manual}{}% 31
+\BOOKMARK [0][-]{chapter.4}{Launching}{part.2}% 32
+\BOOKMARK [1][-]{section.4.1}{Update customized simulink code}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.2}{Vessel and lab preparations}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.3}{Upload VeriStand project to the vessel}{chapter.4}% 35
+\BOOKMARK [0][-]{chapter.5}{Operating}{part.2}% 36
+\BOOKMARK [1][-]{section.5.1}{Workspace}{chapter.5}% 37
+\BOOKMARK [0][-]{chapter.6}{Demolition}{part.2}% 38
+\BOOKMARK [0][-]{appendix.A}{Extended IMU system}{part.2}% 39
+\BOOKMARK [0][-]{appendix.A}{Bibliography}{part.2}% 40

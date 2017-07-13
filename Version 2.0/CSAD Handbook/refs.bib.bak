@@ -21,4 +21,18 @@
   year   = {2016},
 }
 
+@MastersThesis{udjus2017,
+  author = {Udjus, Guttorm},
+  title  = {Force Field Identification and Positioning Control of an Autonomous Vessel using Inertial Measurement Units},
+  school = {NTNU},
+  year   = {2017},
+}
+
+@Book{fossen2011handbook,
+  title     = {Handbook of marine craft hydrodynamics and motion control},
+  publisher = {John Wiley \& Sons},
+  year      = {2011},
+  author    = {Fossen, Thor I},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

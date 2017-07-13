@@ -1,11 +1,37 @@
 \addcontentsline{toc}{section}{Preface}
 \section*{Preface}
-The purpose of this document is to provide a manual that ease the process of using CyberShip Arctic Drillship(CSAD), and concerns only software and hardware of CSAD specifically. For information about the Marine Cybernetics Laboratory(MCLab) and its systems, the reader is referred to the MCLab Handbook, which can be found on GitHub. 
+The purpose of this document is to provide a manual that ease the process of using CyberShip Arctic Drillship(CSAD), and concerns only software and hardware of CSAD specifically. For information about the Marine Cybernetics Laboratory(MCLab) and how to implement custom control systems on the vessel, the reader is referred to the MCLab Handbook, which can be found on GitHub: \url{https://github.com/NTNU-MCS/MC_Lab_Handbook}
 
 \addcontentsline{toc}{section}{Structure of document}
 \section*{Structure of document}
-This User Manual is divided in two parts: 
+This User Manual is divided in three parts: 
 \begin{itemize}
 	\item Technical description(hardware, software, mathematical models etc.)
-	\item Operation manual(software deployment, launching/demolition instructions etc.)
+	\item Operation manual(launching, operation and demolition instructions)
+	\item In the Appendix, a description of the extended IMU system is given(4 IMUs)
 \end{itemize}
+
+\addcontentsline{toc}{section}{CSAD main data}
+\begin{table*}[htb!]
+	\centering
+	\caption{CSAD main data}
+	\begin{tabular}{ll}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\ \hline
+		Length over all & 2.578 [m] \\
+		Beam & 0.440 [m] \\
+		Depth & 0.211 [m]\\
+		Design draft & 0.133 [m]\\
+		Weight & 127.92 [kg] \\
+		Scale & 1:90\\
+		IP-address(port 1) & 192.168.0.55 \\
+		IP-address(port 2) & 192.168.1.21 \\
+		RPi IP-address & 192.168.1.33 \\
+		RPi Port Number & 51717 \\
+		Qualisys body\footnotetext{Body-coordinate of highest marker} & (960, -190, -575) [mm]\\ 
+		MATLAB Version & 2016b\\
+		LabVIEW Version & 2017\\
+		VeriStand Version & 2017\\
+		\hline
+	\end{tabular}
+\end{table*}

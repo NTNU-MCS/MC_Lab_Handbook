@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -12,9 +12,17 @@
 Bj{\o}rn{\o}, J., 2016. Thruster-assisted position mooring of c/s inocean cat i
   drillship. Master's thesis, NTNU.
 
+\bibitem[{Fossen(2011)}]{fossen2011handbook}
+Fossen, T.~I., 2011. Handbook of marine craft hydrodynamics and motion control.
+  John Wiley \& Sons.
+
 \bibitem[{Frederich(2016)}]{frederich2016constrained}
 Frederich, P., 2016. Constrained optimal thrust allocation for c/s inocean cat
   i drillship. Master's thesis, NTNU.
+
+\bibitem[{Heyn et~al.(2017)Heyn, Udjus, and Skjetne}]{heyn2017}
+Heyn, H.-M., Udjus, G., Skjetne, R., 2017. Distributed motion sensing on ships.
+  IEEE Oceans.
 
 \bibitem[{Udjus(2017)}]{udjus2017}
 Udjus, G., 2017. Force field identification and positioning control of an
