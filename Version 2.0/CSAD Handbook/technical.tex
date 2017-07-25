@@ -21,6 +21,7 @@ The vessel is a 1:90 scale model of the Statoil Cat I Arctic Drillship. It is eq
 The development of CSAD and its systems is a product of research from several theses, which contain complementary information on the theory applied to the system. The vessel has also been used in experiments for papers. 
 \subsubsection{Journals and conferences}
 \begin{itemize}
+	\item Modeling, parameter identification and thruster-assisted position mooring of C/S Inoceacn CAT I Drillship \citep{bjorno2017}
 	\item Distributed motion sensing on ships \citep{heyn2017}
 \end{itemize}
 \subsubsection{Specialization projects and master theses}
@@ -28,6 +29,7 @@ The development of CSAD and its systems is a product of research from several th
 	\item Thruster-Assisted Position Mooring of C/S Inocean Cat I Drillship \citep{bjorno2016thruster}
 	\item Constrained Optimal Thrust Allocation for C/S Inocean Cat I Drillship \citep{frederich2016constrained}
 	\item Force Field Identification and Positioning Control of an Autonomous Vessel using Inertial Measurement Units \citep{udjus2017}
+	\item Autonomous Heading Control in Position Mooring with Thrust Assist \citep{johannessen2017}
 \end{itemize}
 
 \section{Actuators}
@@ -141,7 +143,7 @@ The Raspberry Pi provides communication with the Siaxaxis controller, as describ
 
 If there are problems establishing connection between Sixaxis and RPi, try restarting the RPi. If this doesn't work, contact Torgeir Wahl or see the MCLab Handbook on Github for description on how to reconfigure the RPi.
 \subsection{ESC and DC-motor}
-The ESC's are of the type O.S. OCA-150 50 A BL, connected to brushless UMA-2820-950 DC motors driving the thrusters. The ESC's are controlled with PWM signals. As the motors are much more powerful than desired for the model, the PWM signal is constrained. Table \ref{tab:pwm_spec} gives the specification on the PWM signal for the ESC connected to the propellers, and Table \ref{tab:PWM_constraints} gives the constraints on the PWM signal. \todo{Verify the PWM constraints}
+The ESC's are of the type O.S. OCA-150 50 A BL, connected to brushless UMA-2820-950 DC motors driving the thrusters. The ESC's are controlled with PWM signals. As the motors are much more powerful than desired for the model, the PWM signal is constrained. Table \ref{tab:pwm_spec} gives the specification on the PWM signal for the ESC connected to the propellers, and Table \ref{tab:PWM_constraints} gives the constraints on the PWM signal. 
 \begin{table}[h!]
 	\centering
 	\caption{PWM specification for ESC}
@@ -165,7 +167,7 @@ The ESC's are of the type O.S. OCA-150 50 A BL, connected to brushless UMA-2820-
 	\label{tab:PWM_constraints}
 \end{table}
 \subsection{Servo}
-The servos controlling the thruster angles are of the type Dynamixel MX-106R, and are geared 1:1 with the thrusters(1 degree turn on servo results in 1 degree on thruster). The servos are manually tuned to have a zero-angle offset in initial start. As of July 2017, the initial offsets are given in Table \ref{tab:angle_offset}. Maximum and minimum angles for all servos are given in \eqref{eq:maxmin_angle}. If one thruster reaches maximum/minimum angle, it is reset to initial neutral position, as described in the software section. For complementary information.  \todo{update min/max values on PWM in init file}
+The servos controlling the thruster angles are of the type Dynamixel MX-106R, and are geared 1:1 with the thrusters(1 degree turn on servo results in 1 degree on thruster). The servos are manually tuned to have a zero-angle offset in initial start. As of July 2017, the initial offsets are given in Table \ref{tab:angle_offset}. Maximum and minimum angles for all servos are given in \eqref{eq:maxmin_angle}. If one thruster reaches maximum/minimum angle, it is reset to initial neutral position, as described in the software section. 
 \begin{equation}\label{eq:maxmin_angle}
 	\bm{\alpha} \in [-10240\degree, 10240\degree]
 \end{equation}

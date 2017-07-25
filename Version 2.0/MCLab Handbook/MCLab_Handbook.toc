@@ -27,22 +27,27 @@
 \contentsline {chapter}{\numberline {2}Software}{19}{chapter.2}
 \contentsline {section}{\numberline {2.1}Laptop}{19}{section.2.1}
 \contentsline {section}{\numberline {2.2}cRIO}{19}{section.2.2}
-\contentsline {section}{\numberline {2.3}Creating FPGA and XML files}{21}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Create FPGA target and XML}{21}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Install in VeriStand}{23}{subsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.2.1}Ticks}{26}{subsubsection.2.3.2.1}
-\contentsline {section}{\numberline {2.4}Custom Device}{34}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Install}{34}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}Raspberry Pi}{36}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Raspbian installation and setup}{37}{subsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.1.1}Download operating system and utilities}{37}{subsubsection.2.5.1.1}
-\contentsline {subsubsection}{\numberline {2.5.1.2}Write image to SD card}{37}{subsubsection.2.5.1.2}
-\contentsline {subsubsection}{\numberline {2.5.1.3}Terminal access}{38}{subsubsection.2.5.1.3}
-\contentsline {subsubsection}{\numberline {2.5.1.4}Finalize configuration}{38}{subsubsection.2.5.1.4}
-\contentsline {subsubsection}{\numberline {2.5.1.5}Transfer files to RPi from computer}{39}{subsubsection.2.5.1.5}
-\contentsline {subsubsection}{\numberline {2.5.1.6}Set fixed IP address}{40}{subsubsection.2.5.1.6}
-\contentsline {subsection}{\numberline {2.5.2}Sixaxis installation and configuration}{40}{subsection.2.5.2}
-\contentsline {subsubsection}{\numberline {2.5.2.1}Download and install bluetooth support}{40}{subsubsection.2.5.2.1}
-\contentsline {subsubsection}{\numberline {2.5.2.2}Bluetooth pairing}{41}{subsubsection.2.5.2.2}
-\contentsline {subsubsection}{\numberline {2.5.2.3}Joystick manager system service}{41}{subsubsection.2.5.2.3}
-\contentsline {subsubsection}{\numberline {2.5.2.4}Joystick signal server}{42}{subsubsection.2.5.2.4}
+\contentsline {section}{\numberline {2.3}Update customized simulink code}{21}{section.2.3}
+\contentsline {section}{\numberline {2.4}Data logging on cRIO}{24}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}In Workspace}{24}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}In Simulink}{24}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {A}Advanced software topics}{27}{appendix.A}
+\contentsline {section}{\numberline {A.1}Creating FPGA and XML files}{27}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Create FPGA target and XML}{27}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Install in VeriStand}{29}{subsection.A.1.2}
+\contentsline {subsubsection}{\numberline {A.1.2.1}Ticks}{30}{subsubsection.A.1.2.1}
+\contentsline {section}{\numberline {A.2}Custom Device}{40}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Install}{40}{subsection.A.2.1}
+\contentsline {section}{\numberline {A.3}Raspberry Pi}{42}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Raspbian installation and setup}{43}{subsection.A.3.1}
+\contentsline {subsubsection}{\numberline {A.3.1.1}Download operating system and utilities}{43}{subsubsection.A.3.1.1}
+\contentsline {subsubsection}{\numberline {A.3.1.2}Write image to SD card}{43}{subsubsection.A.3.1.2}
+\contentsline {subsubsection}{\numberline {A.3.1.3}Terminal access}{44}{subsubsection.A.3.1.3}
+\contentsline {subsubsection}{\numberline {A.3.1.4}Finalize configuration}{44}{subsubsection.A.3.1.4}
+\contentsline {subsubsection}{\numberline {A.3.1.5}Transfer files to RPi from computer}{45}{subsubsection.A.3.1.5}
+\contentsline {subsubsection}{\numberline {A.3.1.6}Set fixed IP address}{46}{subsubsection.A.3.1.6}
+\contentsline {subsection}{\numberline {A.3.2}Sixaxis installation and configuration}{46}{subsection.A.3.2}
+\contentsline {subsubsection}{\numberline {A.3.2.1}Download and install bluetooth support}{46}{subsubsection.A.3.2.1}
+\contentsline {subsubsection}{\numberline {A.3.2.2}Bluetooth pairing}{47}{subsubsection.A.3.2.2}
+\contentsline {subsubsection}{\numberline {A.3.2.3}Joystick manager system service}{47}{subsubsection.A.3.2.3}
+\contentsline {subsubsection}{\numberline {A.3.2.4}Joystick signal server}{48}{subsubsection.A.3.2.4}

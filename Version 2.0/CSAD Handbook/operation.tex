@@ -51,9 +51,37 @@ After successful deployment of the VeriStand project, you control the vessel wit
 	\item \includegraphics[scale=0.4]{fig/sixaxis_circle} - STOP
 \end{itemize}
 \section{Workspace}
-On the laptop, use the Workspace to monitor and control the different parameters in the Simulation models. There are 1 screen for each operation mode. You should not alter the screen for ctrl\_sixaxis2thruster or ctrl\_DP, while the ctrl\_custom can be modified as desired. How to use and modify the Workspace is described in the MC-Lab Handbook.
-
-Data logging can be done in two ways, as described in MC-Lab Handbook.  
+Data logging can be done in two ways, as described in MC-Lab Handbook. On the laptop, use the Workspace to monitor the different variables. There are 3 screens, one for each operating mode: 
+\paragraph{ctrl\_sixaxis2thruster}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=\linewidth]{fig/CSAD_workspace_sixaxis2thruster.png}
+	\caption{sixaxis2thruster workspace}
+	\label{fig:workspace_sixaxis2thruster}
+\end{figure}
+In Figure \ref{fig:workspace_sixaxis2thruster} the workspace for sixaxis2thruster is illustrated. As the control mode is simply based on the sixaxis controller, the workspace only indicates the different variables on the vessel. 
+\paragraph{ctrl\_DP}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/CSAD_workspace_DP.png}
+	\caption{DP workspace}
+	\label{fig:workspace_DP}
+\end{figure}
+In Figure \ref{fig:workspace_DP} the workspace for the DP code is shown. Here, you define the set point for the reference model, and it's current position and orientation is given. On the right side, the model is tuned. There are some initial values, which provides a functional DP-system. 
+\paragraph{ctrl\_custom}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=\linewidth]{fig/CSAD_workspace_custom}
+	\caption{custom workspace}
+	\label{fig:workspace_custom}
+\end{figure}
+In Figure \ref{fig:workspace_custom} the workspace window for the customized control mode is illustrated. This is the one you should use when testing your control mode design. If you need more screens, press Screen -> Add Screen. To edit one screen, press Screen -> Edit Mode. On the left side(Workspace Controls), you can add different controls or indicators to monitor variables in the simulation model. Press \includegraphics{fig/magnifying_glass.png} and browse for the parameter you want to control/monitor, see Figure \ref{fig:workspace}. For example, real-time tuning of controller gains can be done by adding a Numeric Control->Meter and linking it to the variable. Use the scale option to enable higher precision when tuning. 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.4]{fig/workspace_edit.png}
+	\caption{Workspace window in Edit Mode}
+	\label{fig:workspace}
+\end{figure}
 \chapter{Demolition}
 When the experiments are finished, follow the procedure given here to shut down. 
 \begin{enumerate}

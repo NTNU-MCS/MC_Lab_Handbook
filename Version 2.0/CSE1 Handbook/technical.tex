@@ -38,7 +38,7 @@ The development of CSE1 is a product of much research from several theses, which
 \end{itemize}
 
 \section{Actuators}
-Figure \ref{fig:position_of_actuators} illustrate the position of the actuators, and their distance from CO is given in Table \ref{tab:thruster_distance}. The BT and VSP motor speeds are controlled by an Electronic Speed Control(ESC). The ESC receive their setpoints as pulse-width modulated (PWM) signals from the cRIO digital output module. The VSP blade pitches are controlled by servos. The servos also receive their setpoint as PWM signals. \todo{describe limitations on actuators.}
+Figure \ref{fig:position_of_actuators} illustrate the position of the actuators, and their distance from CO is given in Table \ref{tab:thruster_distance}. The BT and VSP motor speeds are controlled by an Electronic Speed Control(ESC). The ESC receive their setpoints as pulse-width modulated (PWM) signals from the cRIO digital output module. The VSP blade pitches are controlled by servos. The servos also receive their setpoint as PWM signals.
 
 \begin{minipage}{\textwidth}
 	\begin{minipage}[b]{0.49\textwidth}
@@ -281,7 +281,7 @@ The input is saturated as given in Table \ref{tab:input_saturation}.
 \subsubsection{Low-pass}
 The Low-pass block provides an optional simulation of a mechanical system. Modeling the system as a mechanical system is initialized in VeriStand, and must be activated by the user(default is no mechanical simulation). The time constant is equal for all parameters, and is set to 1. 
 \subsubsection{Mapping}
-This block converts the controller inputs to signals suitable for PWM output to the ESC. The position of the VSP steering rods are controlled by a pair of servos for each. There is a nonlinear relation between the input and the PWM signal, and thus a mapping is utilized. The constants found here are manually tuned, and if the thrusters are not operating as desired, it may be necessary with to tune the servos again. The tuning process is described below. \todo{Update when new arms are mounted}
+This block converts the controller inputs to signals suitable for PWM output to the ESC. The position of the VSP steering rods are controlled by a pair of servos for each. There is a nonlinear relation between the input and the PWM signal, and thus a mapping is utilized. The constants found here are manually tuned, and if the thrusters are not operating as desired, it may be necessary with to tune the servos again. The tuning process is described below. 
 
 \begin{table}[h!]
 	\caption{Servo PWM ranges (tuned July 2017)}
@@ -292,16 +292,16 @@ This block converts the controller inputs to signals suitable for PWM output to 
 		\cmidrule{2-5} 
 		& servo1 {[}\%{]} & servo2 {[}\%{]} & servo3 {[}\%{]} & servo4 {[}\%{]}\tabularnewline
 		\midrule
-		N & 4.25 & 5.20 & 4.95 & 3.85\tabularnewline
-		NE & 4.30 & 4.50 & 5.60 & 3.90\tabularnewline
-		E & 4.90 & 4.05 & 5.89 & 4.38\tabularnewline
-		SE & 5.40 & 4.10 & 5.60 & 5.00\tabularnewline
-		S & 5.99 & 4.70 & 4.95 & 5.50\tabularnewline
-		SW & 5.75 & 5.50 & 4.35 & 5.40\tabularnewline
-		W & 5.25 & 5.75 & 4.15 & 4.85\tabularnewline
-		NW & 4.60 & 5.65 & 4.20 & 4.30\tabularnewline
+		N & 6.80 & 7.20 & 6.00 & 4.90\tabularnewline
+		NE & 7.60 & 7.10 & 5.90 & 4.30\tabularnewline
+		E & 7.80 & 6.50 & 5.00 & 3.80\tabularnewline
+		SE & 7.60 & 5.60 & 4.30 & 4.50\tabularnewline
+		S & 6.40 & 5.10 & 4.00 & 5.40\tabularnewline
+		SW & 5.50 & 5.30 & 4.00 & 6.20\tabularnewline
+		W & 5.20 & 5.90 & 4.60 & 6.50\tabularnewline
+		NW & 5.90 & 6.80 & 5.50 & 5.80\tabularnewline
 		\midrule
-		Origo & 4.90 & 4.82 & 4.83 & 4.52\tabularnewline
+		Origo & 6.59 & 6.19 & 4.79 & 5.01\tabularnewline
 	\end{tabular}
 	\label{tab: CSE1 servo ranges} 
 \end{table}
@@ -437,13 +437,13 @@ where
 	\]
 	
 	\item the coriolis and centripetal matrix is
-	\[
-	C\left(\nu\right)=\left[\begin{array}{ccc}
-	0 & -mr & Y_{\dot{v}}v+\left(Y_{\dot{r}}-mx_{g}\right)r\\
-	mr & 0 & -X_{\dot{u}}u\\
-	-Y_{\dot{v}}v-\left(Y_{\dot{r}}-mx_{g}\right)r & X_{\dot{u}}u & 0
-	\end{array}\right]=-C^{\top}\left(\nu\right).
-	\]
+	\begin{equation*}
+	\textbf{C}(\bm{\nu})=\left[ \begin{tabular}{ccc}
+	0 & $ 0 $ & $(-mx_g+Y_{\dot{r}})r+(-m+Y_{\dot{v}})v$\\
+	0 & 0 & $(m-X_{\dot{u}})u$\\
+	$(mx_g-Y_{\dot{r}})r+(m-Y_{\dot{v}})v $ & $(-m+X_{\dot{u}})u$ & 0\\
+	\end{tabular} \right]
+	\end{equation*}
 	\item the damping matrix is
 	\[
 	D\left(\nu\right)=\left[\begin{array}{ccc}
@@ -469,7 +469,7 @@ The rigid body inertia and hydrodynamic added mass parameters are given in Table
 			\midrule 
 			Parameter & Value & Parameter & Value\tabularnewline
 			\midrule 
-			$m$  & $14.79$  & $X_{\dot{u}}$  & $-2$ \tabularnewline
+			$m$  & $14.11$  & $X_{\dot{u}}$  & $-2$ \tabularnewline
 			$I_{z}$  & $1.76$  & $Y_{\dot{v}}$  & $-10$ \tabularnewline
 			$x_{g}$  & $0.0375$  & $Y_{\dot{r}}$  & $-0$ \tabularnewline
 			$y_{g}$  & $0.0$  & $N_{\dot{r}}$  & $-1$ \tabularnewline

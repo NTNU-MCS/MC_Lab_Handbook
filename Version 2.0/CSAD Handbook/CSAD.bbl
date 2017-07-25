@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{8}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -12,6 +12,12 @@
 Bj{\o}rn{\o}, J., 2016. Thruster-assisted position mooring of c/s inocean cat i
   drillship. Master's thesis, NTNU.
 
+\bibitem[{Bjørnø et~al.(2017)Bjørnø, Heyn, Skjetne, Dahl, and
+  Frederich}]{bjorno2017}
+Bjørnø, J., Heyn, H.-M., Skjetne, R., Dahl, A., Frederich, P., 2017.
+  Modeling, parameter identification and thruster-assisted position mooring of
+  c/s inoceacn cat i drillship. Offshore \& Arctic Engineering.
+
 \bibitem[{Fossen(2011)}]{fossen2011handbook}
 Fossen, T.~I., 2011. Handbook of marine craft hydrodynamics and motion control.
   John Wiley \& Sons.
@@ -23,6 +29,10 @@ Frederich, P., 2016. Constrained optimal thrust allocation for c/s inocean cat
 \bibitem[{Heyn et~al.(2017)Heyn, Udjus, and Skjetne}]{heyn2017}
 Heyn, H.-M., Udjus, G., Skjetne, R., 2017. Distributed motion sensing on ships.
   IEEE Oceans.
+
+\bibitem[{Johannessen(2017)}]{johannessen2017}
+Johannessen, S.~A., 2017. Autonomous heading control in position mooring with
+  thrust assist. Master's thesis, NTNU.
 
 \bibitem[{Udjus(2017)}]{udjus2017}
 Udjus, G., 2017. Force field identification and positioning control of an

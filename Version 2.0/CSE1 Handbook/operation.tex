@@ -9,38 +9,12 @@ It is assumed that the reader has studied the MCLab Handbook before using CSE1, 
 \end{description}
 \chapter{Launching}
 \textit{Describe hardware preparations, establishing connection, building and including simulink model, uploading code to vessel}
-\section{Update customized simulink code}\label{sec:simulink_import}
-When the \textit{ctrl\_custom.slx} Simulink project is updated with the desired control system, the code must be compiled to C-language for exporting to the cRIO. First, make sure the active folder directory in MATLAB is \path{CSE1\simulink system\}. In Simulink, open the Model Configuration (press \includegraphics[scale=0.7]{fig/model_conf.png}), and make sure the following settings are applied(see Figure \ref{fig:model_configuration}):
-\begin{description}
-	\item [{Solver:}] Stop time: \textbf{inf}, Solver type: \textbf{Fixed-step}, Solver: \textbf{discrete} or \textbf{ode3}, Fixed-step size: \textbf{0.01}
-	\item [{Code Generation:}] System target file: \textbf{NIVeriStand\_VxWorks.tlc}. If another file is shown, press Browse and find the correct one. 
-	\item [{Code Generation/NI Configuration:}] WindRiver GNU Path: \path{C:\gccdist\supp\setup-gcc.bat}. If \path{supp} does not work, change it to \path{supplemental}.
-\end{description}
-\begin{figure}[htb!]
-	\centering
-	\includegraphics[scale=0.5]{fig/model_conf_window.png}
-	\caption{Model Configuration window}
-	\label{fig:model_configuration}
-\end{figure}
-You are now ready to compile the code and include it in the VeriStand project:
-\begin{enumerate}
-	\item Compile the Simulink model by pressing \texttt{Ctrl+B} or \includegraphics{fig/build.png} in the Simulink window. MATLAB is now compiling your code, and it will update the folder \path{CSE1\Simulink system\ctrl_custom_niVeriStand_VxWorks_rtw} with a cRIO compatible simulation model. 
-	\item Open the VeriStand project (\textit{CSE1.nivsproj}), and then open the System Explorer as illustrated in Figure \ref{fig:project_explorer}.
-	\item Navigate to the \texttt{ctrl\_custom} Simulation Model, verify the modification date/time is correct (time stamp from when you compiled the simulink model) and then press Reload as illustrated in Figure \ref{fig:system_explorer}. 
-	\item Save and close the System Explorer window. 
-\end{enumerate}
-Your Simulink model is now updated and included in the VeriStand project, continue with preparing the vessel and uploading the code to the vessel as described in the latter. 
-\begin{figure}[htb!]
-	\centering
-	\includegraphics[scale=0.5]{fig/system_explorer.png}
-	\caption{System Explorer window}
-	\label{fig:system_explorer}
-\end{figure}
+
 \section{Vessel and lab preparations}
 The gear in the bow thruster is lubricated with water, and thus it is IMPORTANT that the vessel is always launched in the basin when starting up/deploying the code. Hence, do as follows: 
 \begin{enumerate}
 	\item Place the vessel in the basin
-	\item Check that the weight in the bow is placed at its position \todo{find an appropriate weight}
+	\item Check that the 1kg weight in the bow is placed at its position, in front of the cRIO box. 
 	\item Place the 12V 12Ah battery(marked CSE1) in its dedicated position. Connect red/positive first, then black/negative.  
 	\item Once the Bluetooth dongle (connected to the RPi) starts blinking(blue light with frequency approx. 1 Hz), press the PS-button on the sixaxis controller. On the controller, indicator 1 lights continuously red when successfully connected. 
 	\item Place the vessel inside the region of sight for Qualisys(check on the computer that the 4 reflectors are visible). Align the vessel with 0 degrees heading in the basin frame, i.e. with the bow pointing towards the command center. 
@@ -54,12 +28,14 @@ The gear in the bow thruster is lubricated with water, and thus it is IMPORTANT 
 	\label{fig:QTM_window}
 \end{figure}
 CSE1 and the lab is now set up for experiments. However, before continuing to controlling the vessel, make sure the vessel does not take in water(there have been some issues with leakage in the hull opening around the bow thruster...)
+\section{Updating custom control system}
+See the MC-Lab Handbook for instructions on how to update and include your customized control system in the VeriStand project. Once you have completed the steps described there, continue here with uploading the code to the vessel. 
 \section{Upload VeriStand project to the vessel}
 With the hardware set up and ready, continue to preparing the software. 
 \begin{enumerate}
 	\item Make sure the computer is connected to the MCLab network(either by Ethernet cable or the WiFi). 
 	\item Check the communication between the laptop and CSE1. Open command prompt(cmd.exe), write the following: \texttt{ping 192.168.0.75}. Make sure the command returns 0\% loss.
-	\item Open the VeriStand project (\textit{CSE1.nivsproj}). If the project has been updated as described in Section \ref{sec:simulink_import}, press the deploy button(see Figure \ref{fig:project_explorer}) or F6. The project is now uploading to the cRIO on board CSE1. If deployment is not successful, make sure the sixaxis controller is still connected to the RPi, and that the vessel body is shown in Qualisys. Try deploying again. If it still does not work, try restarting the vessel(either disconnecting the battery and connecting it again, or restart the cRIO in NI MAX). Also check that the Qualisys computer is connected to MCLab(\texttt{ping 192.168.0.10}). 
+	\item Open the VeriStand project (\textit{CSE1.nivsproj}). Press the deploy button(see Figure \ref{fig:project_explorer}) or F6. The project is now uploading to the cRIO on board CSE1. If deployment is not successful, make sure the sixaxis controller is still connected to the RPi, and that the vessel body is shown in Qualisys. Try deploying again. If it still does not work, try restarting the vessel(either disconnecting the battery and connecting it again, or restart the cRIO in NI MAX). Also check that the Qualisys computer is connected to MCLab(\texttt{ping 192.168.0.10}). 
 	\item When successfully deployed, open the Workspace (\textit{CSE1.nivsscreen}). The code is now running on the cRIO, continue to the next Chapter for instructions on operating the vessel. 
 \end{enumerate}
 \begin{figure}[htb!]
@@ -76,26 +52,39 @@ After successfully deploying the VeriStand project, you control the vessel with 
 	\item \includegraphics[scale=0.5]{fig/sixaxis_cross.png} - ctrl\_DP
 	\item \includegraphics[scale=0.5]{fig/sixaxis_circle.png} - STOP
 \end{itemize}
+Data logging can be done in two ways, as described in the MC-Lab Handbook. 
 \section{Workspace}
-On the laptop, use the Workspace to monitor the different variables. There are 3 screens, one for each operating mode. If you need more screens, Screen -> Add Screen. To edit, Screen -> Edit Mode. On the left side(Workspace Controls), you can add different controls or indicators to monitor variables in the simulation model. Press \includegraphics{fig/magnifying_glass.png} and browse for the parameter you want to control/monitor, see Figure \ref{fig:workspace}. For example, real-time tuning of controller gains can be done by adding a Numeric Control->Meter and linking it to the variable. Use the scale option to enable higher precision when tuning. 
+On the laptop, use the Workspace to monitor the different variables. There are 3 screens, one for each operating mode: 
+\paragraph{ctrl\_sixaxis2thruster}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=\linewidth]{fig/CSE1_workspace_sixaxis2thruster.png}
+	\caption{sixaxis2thruster workspace}
+	\label{fig:workspace_sixaxis2thruster}
+\end{figure}
+In Figure \ref{fig:workspace_sixaxis2thruster} the workspace for sixaxis2thruster is illustrated. As the control mode is simply based on the sixaxis controller, the workspace only indicates the different variables on the vessel. 
+\paragraph{ctrl\_DP}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/CSE1_workspace_DP.png}
+	\caption{DP workspace}
+	\label{fig:workspace_DP}
+\end{figure}
+In Figure \ref{fig:workspace_DP} the workspace for the DP code is shown. Here, you define the set point for the reference model, and it's current position and orientation is given. On the right side, the model is tuned. There are some initial values, which provides a functional DP-system. 
+\paragraph{ctrl\_custom}
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=\linewidth]{fig/CSAD_workspace_custom}
+	\caption{custom workspace}
+	\label{fig:workspace_custom}
+\end{figure}
+In Figure \ref{fig:workspace_custom} the workspace window for the customized control mode is illustrated. This is the one you should use when testing your control mode design. If you need more screens, press Screen -> Add Screen. To edit one screen, press Screen -> Edit Mode. On the left side(Workspace Controls), you can add different controls or indicators to monitor variables in the simulation model. Press \includegraphics{fig/magnifying_glass.png} and browse for the parameter you want to control/monitor, see Figure \ref{fig:workspace}. For example, real-time tuning of controller gains can be done by adding a Numeric Control->Meter and linking it to the variable. Use the scale option to enable higher precision when tuning. 
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[scale=0.4]{fig/workspace_edit.png}
 	\caption{Workspace window in Edit Mode}
 	\label{fig:workspace}
 \end{figure}
-\subsection{Data logging}
-Logging of data can be done in 2 ways:
-\paragraph{In Workspace}
-Logging channels/parameters from Workspace is done with a Data Logging Controller, found in Workspace Controls. This is the preferred method, as you set the start and stop of data logging and avoid problems if the code does not deploy correctly. The data log is also saved on the laptop, not on the cRIO. Add a Data Logging Control in your Workspace window, set the desired path for the file and add the channels/parameters of interest. See Figure \ref{fig:data_logging}. 
-\begin{figure}[htb!]
-	\centering
-	\includegraphics[scale=0.5]{fig/data_logging.png}
-	\caption{Data logging in Workspace}
-	\label{fig:data_logging}
-\end{figure}
-\paragraph{In Simulink}
-In the Simulink model, it is possible to add "Write to File" blocks linked to the different parameters. By using this method, the cRIO logs the parameters continuously after deployment, until the VeriStand project is undeployed. The data is logged as binary numbers, and if the code is not undeployed correctly(e.g. some error/loss of power etc.), the data log becomes corrupted. However, if this method still is chosen, the data files must be copied from the cRIO to the laptop. Open NI MAX, in the left pane, browse to CSE1, right click on it and choose File Transfer. Copy the logged files to the laptop, which can then be loaded in MATLAB. 
 \chapter{Demolition}
 When the experiments are finished, follow the procedure given here to shut down. 
 \begin{enumerate}
