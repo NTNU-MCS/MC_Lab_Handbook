@@ -27,6 +27,8 @@
 \usepackage{gensymb}
 %\usepackage[numbers]{natbib} % Use this command if you want to refer to the literature by numbers, e.g., [1]
 \usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage[yyyymmdd]{datetime}
 \linespread{1.5}
 
 \newenvironment{remark}{\par\mbox{}\par\noindent{\bfseries \emph{Remark}\/}:\normalfont}{\par}
@@ -35,6 +37,13 @@
 \usepackage[colorlinks=true, a4paper=true, pdfstartview=FitV,
 linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
 \pdfcompresslevel=9
+
+
+\fancyhf{}
+\renewcommand{\dateseparator}{.}
+\fancyhead[L]{\today\ \currenttime}
+\fancyhead[R]{\thepage}
+\pagestyle{fancy}
 
 %%===================================
 \begin{document}
@@ -55,6 +64,7 @@ linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
 	\includegraphics[width=0.5\linewidth]{fig/CSE1.png}
 \end{figure*}
 
+
 \begin{flushleft}
 	\vfill{}
 	\par\end{flushleft}
@@ -64,6 +74,7 @@ linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
 	\par\end{flushleft}
 Faculty of Engineering Science and Technology\\
 Department of Marine Technology
+
 
 \clearpage{}%\thispagestyle{empty}\vspace*{3cm}
 
